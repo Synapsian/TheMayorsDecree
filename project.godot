@@ -12,4 +12,4 @@ config_version=5
 
 config/name="The Mayor's Decree"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://test.svg"
+config/icon="res://hitlerlover.svg"
