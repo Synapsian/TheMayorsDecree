@@ -25,3 +25,5 @@ sprite_frames = SubResource("SpriteFrames_bo7jb")
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7lsuj")
+
+[node name="Camera2D" type="Camera2D" parent="."]
