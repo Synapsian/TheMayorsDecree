@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://trnr05ftt3c8"]
 
-[ext_resource type="Texture2D" uid="uid://bgqyegaiifwvk" path="res://aaaa.svg" id="1_dwjlt"]
-[ext_resource type="Script" path="res://player.gd" id="1_qdl6m"]
+[ext_resource type="Texture2D" uid="uid://bgqyegaiifwvk" path="res://sprites/aaaa.svg" id="1_dwjlt"]
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_qdl6m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bo7jb"]
 animations = [{
@@ -27,3 +27,5 @@ sprite_frames = SubResource("SpriteFrames_bo7jb")
 shape = SubResource("RectangleShape2D_7lsuj")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -100)
+position_smoothing_enabled = true
