@@ -1,0 +1,1 @@
+Put in item script + item texture, must have exact same name.
