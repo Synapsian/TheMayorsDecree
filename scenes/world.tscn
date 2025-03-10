@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://trnr05ftt3c8" path="res://scenes/player.tscn" id="1_ubppf"]
 [ext_resource type="Texture2D" uid="uid://bx7pqdahjw5pv" path="res://tiles/temp_tileset.png" id="2_wtdtc"]
 [ext_resource type="Script" path="res://scenes/transition.gd" id="3_5d13h"]
-[ext_resource type="Texture2D" uid="uid://eu8lyt71nj8" path="res://sprites/arrowfix.png" id="4_vycs2"]
+[ext_resource type="Texture2D" uid="uid://gkoa16u0ehbw" path="res://sprites/pixil-arrow.png" id="4_wpvlp"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jlpak"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vcn4u"]
 texture = ExtResource("2_wtdtc")
 texture_region_size = Vector2i(64, 64)
 7:4/size_in_atlas = Vector2i(2, 1)
@@ -52,7 +52,7 @@ texture_region_size = Vector2i(64, 64)
 [sub_resource type="TileSet" id="TileSet_2m72k"]
 tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
-sources/3 = SubResource("TileSetAtlasSource_jlpak")
+sources/3 = SubResource("TileSetAtlasSource_vcn4u")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ug2qr"]
 size = Vector2(186, 216)
@@ -68,18 +68,21 @@ tile_map_data = PackedByteArray("AAAAAAQAAwAEAAEAAAD//wQAAwAEAAEAAAABAAQAAwAEAAE
 tile_set = SubResource("TileSet_2m72k")
 
 [node name="Transition" type="Area2D" parent="."]
-position = Vector2(1154, 418)
+position = Vector2(1154, 415)
 script = ExtResource("3_5d13h")
 metadata/_edit_group_ = true
+metadata/Position = Vector2(500, 450)
 
 [node name="Hitbox" type="CollisionShape2D" parent="Transition"]
 shape = SubResource("RectangleShape2D_ug2qr")
+metadata/PlayerInside = false
 
 [node name="Arrow" type="Sprite2D" parent="Transition"]
+visible = false
 position = Vector2(0, -100)
-rotation = 1.5708
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("4_vycs2")
+scale = Vector2(2, 2)
+texture = ExtResource("4_wpvlp")
 
 [connection signal="body_entered" from="Transition" to="Transition" method="_on_body_entered"]
 [connection signal="body_exited" from="Transition" to="Transition" method="_on_body_exited"]
+[connection signal="set_position" from="Transition" to="character" method="_on_transition_set_position"]
