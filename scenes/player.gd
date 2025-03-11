@@ -28,5 +28,4 @@ func _physics_process(delta: float) -> void:
 func _on_transition_set_position(new_position: Vector2) -> void:
 	TransitionScreen.transition()
 	await TransitionScreen.on_transition_finished
-	print("TransitionFinishedPlayer")
 	position = new_position

@@ -1,12 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://bkeivelcqfgfo"]
+[gd_scene load_steps=11 format=4 uid="uid://bkeivelcqfgfo"]
 
-[ext_resource type="PackedScene" uid="uid://trnr05ftt3c8" path="res://scenes/player.tscn" id="1_ubppf"]
-[ext_resource type="Texture2D" uid="uid://bx7pqdahjw5pv" path="res://tiles/temp_tileset.png" id="2_wtdtc"]
-[ext_resource type="Script" path="res://scenes/transition.gd" id="3_5d13h"]
-[ext_resource type="Texture2D" uid="uid://gkoa16u0ehbw" path="res://sprites/pixil-arrow.png" id="4_wpvlp"]
+[ext_resource type="PackedScene" uid="uid://trnr05ftt3c8" path="res://scenes/player.tscn" id="1_t1tvi"]
+[ext_resource type="Texture2D" uid="uid://bx7pqdahjw5pv" path="res://tiles/temp_tileset.png" id="2_1vk2r"]
+[ext_resource type="Script" path="res://scenes/transition.gd" id="3_wurgi"]
+[ext_resource type="Texture2D" uid="uid://gkoa16u0ehbw" path="res://sprites/pixil-arrow.png" id="4_vkxcd"]
+[ext_resource type="Texture2D" uid="uid://cv7mbbpd84lih" path="res://sprites/parallax/sky.png" id="5_3sthg"]
+[ext_resource type="Texture2D" uid="uid://csuacr148jq7n" path="res://sprites/parallax/layer2fix.png" id="6_1p0ek"]
+[ext_resource type="Texture2D" uid="uid://bas6hhgc6p7f1" path="res://sprites/parallax/layer1.png" id="7_5nniv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vcn4u"]
-texture = ExtResource("2_wtdtc")
+texture = ExtResource("2_1vk2r")
 texture_region_size = Vector2i(64, 64)
 7:4/size_in_atlas = Vector2i(2, 1)
 7:4/0 = 0
@@ -57,9 +60,9 @@ sources/3 = SubResource("TileSetAtlasSource_vcn4u")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ug2qr"]
 size = Vector2(186, 216)
 
-[node name="world" type="Node2D"]
+[node name="world_mayor" type="Node2D"]
 
-[node name="character" parent="." instance=ExtResource("1_ubppf")]
+[node name="character" parent="." instance=ExtResource("1_t1tvi")]
 z_index = 5
 position = Vector2(57, 420)
 
@@ -69,7 +72,7 @@ tile_set = SubResource("TileSet_2m72k")
 
 [node name="Transition" type="Area2D" parent="."]
 position = Vector2(1154, 415)
-script = ExtResource("3_5d13h")
+script = ExtResource("3_wurgi")
 metadata/_edit_group_ = true
 metadata/Position = Vector2(500, 450)
 
@@ -81,7 +84,31 @@ metadata/PlayerInside = false
 visible = false
 position = Vector2(0, -100)
 scale = Vector2(2, 2)
-texture = ExtResource("4_wpvlp")
+texture = ExtResource("4_vkxcd")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky"]
+scale = Vector2(2, 2)
+texture = ExtResource("5_3sthg")
+
+[node name="Layer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(2000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Layer2"]
+scale = Vector2(2, 2)
+texture = ExtResource("6_1p0ek")
+
+[node name="Layer1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Layer1"]
+scale = Vector2(2, 2)
+texture = ExtResource("7_5nniv")
 
 [connection signal="body_entered" from="Transition" to="Transition" method="_on_body_entered"]
 [connection signal="body_exited" from="Transition" to="Transition" method="_on_body_exited"]

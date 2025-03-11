@@ -5,7 +5,10 @@ var interaction_debounce = false
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("Interact") and $Hitbox.get_meta("PlayerInside") == true and interaction_debounce == false:
+		interaction_debounce = true
 		set_position.emit(get_meta("Position"))
+		await TransitionScreen.on_transition_finished
+		interaction_debounce = false
 
 func _on_body_entered(body: Node2D) -> void:
 	if not body.name == "character": return

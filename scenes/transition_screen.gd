@@ -14,10 +14,8 @@ func _ready() -> void:
 func _on_animation_finished(animation_name):
 	if animation_name == "fade_to_black":
 		on_transition_finished.emit()
-		print("TransitionFinishedEmit")
 		timer.start()
 		await timer.timeout
-		print("FadingBack")
 		animation_player.play("fade_to_normal")
 	elif animation_name == "fade_to_normal":
 		color_rect.visible = false
