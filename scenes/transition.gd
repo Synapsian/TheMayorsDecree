@@ -4,11 +4,27 @@ signal set_position(x,y)
 var interaction_debounce = false
 
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("Interact") and $Hitbox.get_meta("PlayerInside") == true and interaction_debounce == false:
-		interaction_debounce = true
+	if Input.is_action_pressed("Interact") and $Hitbox.get_meta("PlayerInside") == true:
+		var bodies = get_overlapping_bodies()
+		var body = null
+		for index in len(bodies):
+			body = bodies[index]
+			if body.name != "character": 
+				body = null
+				continue
+			if body.get_meta("transition_debounce") == true: return
+			body.set_meta("transition_debounce",true)
+		if body == null: return
 		set_position.emit(get_meta("Position"))
-		await TransitionScreen.on_transition_finished
-		interaction_debounce = false
+		
+		var newtimer = Timer.new()
+		newtimer.wait_time = 3
+		newtimer.one_shot = true 
+		$Hitbox.add_child(newtimer)
+		newtimer.start()
+		await newtimer.timeout
+		newtimer.queue_free()
+		body.set_meta("transition_debounce",false)
 
 func _on_body_entered(body: Node2D) -> void:
 	if not body.name == "character": return

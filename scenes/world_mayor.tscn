@@ -65,16 +65,18 @@ size = Vector2(186, 216)
 [node name="character" parent="." instance=ExtResource("1_t1tvi")]
 z_index = 5
 position = Vector2(57, 420)
+metadata/transition_debounce = false
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAAAAQAAwAEAAEAAAD//wQAAwAEAAEAAAABAAQAAwAEAAEAAAD+/wQAAwAEAAEAAAACAAQAAwAEAAEAAAADAAQAAwAEAAEAAAAEAAQAAwAEAAEAAAD9/wQAAwAEAAEAAAD8/wQAAwAEAAEAAAAFAAQAAwAEAAEAAAAGAAQAAwAEAAEAAAAHAAQAAwAEAAEAAAAIAAQAAwAEAAEAAAAJAAQAAwAEAAEAAAAGAAMAAwANAAEAAAAGAAIAAwANAAEAAAAGAAEAAwANAAEAAAAGAAAAAwANAAEAAAALAAAAAwANAAEAAAALAAEAAwANAAEAAAALAAIAAwANAAEAAAALAAMAAwANAAEAAAAGAP//AwANAAEAAAAHAP//AwANAAEAAAAIAP//AwANAAEAAAAJAP//AwANAAEAAAAKAP//AwANAAEAAAALAP//AwANAAEAAAAKAAQAAwAEAAEAAAALAAQAAwAEAAEAAAAHAAMAAwAQAAEAAAAHAAIAAwAQAAEAAAAHAAEAAwAQAAEAAAAHAAAAAwAQAAEAAAAIAAAAAwAQAAEAAAAJAAAAAwAQAAEAAAAKAAAAAwAQAAEAAAAKAAEAAwAQAAEAAAAKAAIAAwAQAAEAAAAKAAMAAwAQAAEAAAAJAAMAAwAQAAEAAAAIAAMAAwAQAAEAAAAIAAIAAwAQAAEAAAAJAAEAAwAQAAEAAAAJAAIAAwAQAAEAAAAIAAEAAwAQAAEAAAD7/wQAAwAEAAEAAAD6/wQAAwAEAAEAAAD5/wQAAwAEAAEAAAD4/wQAAwAEAAEAAAD3/wQAAwAEAAEAAAA=")
+position = Vector2(135, 245)
+tile_map_data = PackedByteArray("AAAAAAQAAwAEAAEAAAD//wQAAwAEAAEAAAABAAQAAwAEAAEAAAD+/wQAAwAEAAEAAAACAAQAAwAEAAEAAAADAAQAAwAEAAEAAAAEAAQAAwAEAAEAAAD9/wQAAwAEAAEAAAD8/wQAAwAEAAEAAAAFAAQAAwAEAAEAAAAGAAQAAwAEAAEAAAAHAAQAAwAEAAEAAAAIAAQAAwAEAAEAAAAJAAQAAwAEAAEAAAAGAAMAAwANAAEAAAAGAAIAAwANAAEAAAAGAAEAAwANAAEAAAAGAAAAAwANAAEAAAALAAAAAwANAAEAAAALAAEAAwANAAEAAAALAAIAAwANAAEAAAALAAMAAwANAAEAAAAGAP//AwANAAEAAAAHAP//AwANAAEAAAAIAP//AwANAAEAAAAJAP//AwANAAEAAAAKAP//AwANAAEAAAALAP//AwANAAEAAAAKAAQAAwAEAAEAAAALAAQAAwAEAAEAAAAHAAMAAwAQAAEAAAAHAAIAAwAQAAEAAAAHAAEAAwAQAAEAAAAHAAAAAwAQAAEAAAAIAAAAAwAQAAEAAAAJAAAAAwAQAAEAAAAKAAAAAwAQAAEAAAAKAAEAAwAQAAEAAAAKAAIAAwAQAAEAAAAKAAMAAwAQAAEAAAAJAAMAAwAQAAEAAAAIAAMAAwAQAAEAAAAIAAIAAwAQAAEAAAAJAAEAAwAQAAEAAAAJAAIAAwAQAAEAAAAIAAEAAwAQAAEAAAD7/wQAAwAEAAEAAAD6/wQAAwAEAAEAAAD5/wQAAwAEAAEAAAD4/wQAAwAEAAEAAAD3/wQAAwAEAAEAAAAIAOr/AwAHAAEAAAAHAOr/AwAHAAEAAAAGAOr/AwAHAAEAAAAFAOr/AwAHAAEAAAAEAOr/AwAHAAEAAAADAOr/AwAHAAEAAAACAOr/AwAHAAEAAAABAOr/AwAHAAEAAAAAAOr/AwAHAAEAAAD//+r/AwAHAAEAAAD+/+r/AwAHAAEAAAD+/+n/AwAHAAEAAAD+/+j/AwAHAAEAAAD+/+f/AwAHAAEAAAD+/+b/AwAHAAEAAAD+/+X/AwAHAAEAAAD+/+T/AwAHAAEAAAD+/+P/AwAHAAEAAAD//+P/AwAHAAEAAAAAAOP/AwAHAAEAAAABAOP/AwAHAAEAAAACAOP/AwAHAAEAAAADAOP/AwAHAAEAAAAEAOP/AwAHAAEAAAAFAOP/AwAHAAEAAAAGAOP/AwAHAAEAAAAHAOP/AwAHAAEAAAAIAOP/AwAHAAEAAAAJAOP/AwAHAAEAAAAKAOP/AwAHAAEAAAALAOP/AwAHAAEAAAAMAOP/AwAHAAEAAAAMAOT/AwAHAAEAAAAMAOX/AwAHAAEAAAAMAOb/AwAHAAEAAAAMAOf/AwAHAAEAAAAMAOj/AwAHAAEAAAAMAOn/AwAHAAEAAAAMAOr/AwAHAAEAAAALAOr/AwAHAAEAAAAKAOr/AwAHAAEAAAAJAOr/AwAHAAEAAAAAAOj/AwABAAcAAAAAAOn/AwABAAcAAAA=")
 tile_set = SubResource("TileSet_2m72k")
 
 [node name="Transition" type="Area2D" parent="."]
-position = Vector2(1154, 415)
+position = Vector2(1283, 658)
 script = ExtResource("3_wurgi")
 metadata/_edit_group_ = true
-metadata/Position = Vector2(500, 450)
+metadata/Position = Vector2(200, -2677)
 
 [node name="Hitbox" type="CollisionShape2D" parent="Transition"]
 shape = SubResource("RectangleShape2D_ug2qr")
@@ -86,30 +88,49 @@ position = Vector2(0, -100)
 scale = Vector2(2, 2)
 texture = ExtResource("4_vkxcd")
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+[node name="Transition2" type="Area2D" parent="."]
+position = Vector2(198, -2677)
+script = ExtResource("3_wurgi")
+metadata/_edit_group_ = true
+metadata/Position = Vector2(500, 450)
 
-[node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Hitbox" type="CollisionShape2D" parent="Transition2"]
+shape = SubResource("RectangleShape2D_ug2qr")
+metadata/PlayerInside = false
+
+[node name="Arrow" type="Sprite2D" parent="Transition2"]
+visible = false
+position = Vector2(0, -100)
+scale = Vector2(2, 2)
+texture = ExtResource("4_vkxcd")
+
+[node name="outside_parralax" type="ParallaxBackground" parent="."]
+
+[node name="Sky" type="ParallaxLayer" parent="outside_parralax"]
 motion_mirroring = Vector2(2000, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky"]
+[node name="Sprite2D" type="Sprite2D" parent="outside_parralax/Sky"]
 scale = Vector2(2, 2)
 texture = ExtResource("5_3sthg")
 
-[node name="Layer2" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Layer2" type="ParallaxLayer" parent="outside_parralax"]
 motion_scale = Vector2(0.5, 0.5)
 motion_mirroring = Vector2(2000, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Layer2"]
+[node name="Sprite2D" type="Sprite2D" parent="outside_parralax/Layer2"]
 scale = Vector2(2, 2)
 texture = ExtResource("6_1p0ek")
 
-[node name="Layer1" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Layer1" type="ParallaxLayer" parent="outside_parralax"]
 motion_mirroring = Vector2(2000, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Layer1"]
+[node name="Sprite2D" type="Sprite2D" parent="outside_parralax/Layer1"]
 scale = Vector2(2, 2)
 texture = ExtResource("7_5nniv")
 
 [connection signal="body_entered" from="Transition" to="Transition" method="_on_body_entered"]
 [connection signal="body_exited" from="Transition" to="Transition" method="_on_body_exited"]
 [connection signal="set_position" from="Transition" to="character" method="_on_transition_set_position"]
+[connection signal="body_entered" from="Transition2" to="Transition2" method="_on_body_entered"]
+[connection signal="body_exited" from="Transition2" to="Transition2" method="_on_body_exited"]
+[connection signal="set_position" from="Transition2" to="character" method="_on_transition_set_position"]
