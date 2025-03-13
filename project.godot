@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="The Mayor's Decree"
-run/main_scene="res://scenes/world_mayor.tscn"
+run/main_scene="res://scenes/world_worker.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://sprites/aaaa.svg"
 
