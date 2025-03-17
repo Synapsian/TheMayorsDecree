@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://ke8fk4oe4r77"]
+
+[ext_resource type="FontFile" uid="uid://cf50jb0yimike" path="res://fonts/GeosansLight.ttf" id="1_ydwq0"]
+
+[node name="tasks" type="CanvasLayer"]
+
+[node name="container" type="ColorRect" parent="."]
+self_modulate = Color(0, 0, 0, 0.176471)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -206.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = 256.0
+grow_horizontal = 0
+
+[node name="title" type="Label" parent="container"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_right = 101.0
+offset_bottom = 49.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_ydwq0")
+text = "TASKS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="container"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -76.0
+offset_right = 100.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="container/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ydwq0")
+text = "GO TO WORK"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="container/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ydwq0")
+text = "ANOTHER IMPORTANT TASK"
+horizontal_alignment = 1

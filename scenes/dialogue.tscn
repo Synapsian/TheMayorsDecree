@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8qaq5x2p02bk"]
+
+[ext_resource type="Script" path="res://scenes/dialogue.gd" id="1_4pmsi"]
+[ext_resource type="Texture2D" uid="uid://dtea0e28gk2ha" path="res://sprites/npcs/test_npc.png" id="1_hl4xa"]
+[ext_resource type="FontFile" uid="uid://shvvdl5e4cdy" path="res://fonts/SimplySquare.ttf" id="2_xy85x"]
+
+[node name="dialogue" type="CanvasLayer"]
+visible = false
+script = ExtResource("1_4pmsi")
+
+[node name="container" type="ColorRect" parent="."]
+z_index = 5
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -152.0
+offset_right = 250.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0, 0, 0, 1)
+metadata/_edit_group_ = true
+
+[node name="outline" type="ColorRect" parent="container"]
+z_index = -1
+clip_contents = true
+custom_minimum_size = Vector2(504, 129)
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 502.0
+offset_bottom = 127.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="container/outline"]
+z_index = 1
+layout_mode = 0
+offset_left = 63.0
+offset_top = 28.0
+offset_right = 502.0
+offset_bottom = 101.0
+theme_override_fonts/normal_font = ExtResource("2_xy85x")
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="Sprite2D" type="Sprite2D" parent="container/outline"]
+z_index = 1
+position = Vector2(27, 65)
+texture = ExtResource("1_hl4xa")
+
+[node name="Timer" type="Timer" parent="container/outline"]

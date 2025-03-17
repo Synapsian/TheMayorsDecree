@@ -4,7 +4,7 @@ signal set_position(x,y)
 var interaction_debounce = false
 
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("Interact") and $Hitbox.get_meta("PlayerInside") == true:
+	if Input.is_action_just_pressed("Interact") and $Hitbox.get_meta("PlayerInside") == true:
 		var bodies = get_overlapping_bodies()
 		var body = null
 		for index in len(bodies):
