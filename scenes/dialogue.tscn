@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c8qaq5x2p02bk"]
 
-[ext_resource type="Script" path="res://scenes/dialogue.gd" id="1_4pmsi"]
+[ext_resource type="Script" uid="uid://daw7c1uk2706p" path="res://scenes/dialogue.gd" id="1_4pmsi"]
 [ext_resource type="Texture2D" uid="uid://dtea0e28gk2ha" path="res://sprites/npcs/test_npc.png" id="1_hl4xa"]
 [ext_resource type="FontFile" uid="uid://shvvdl5e4cdy" path="res://fonts/SimplySquare.ttf" id="2_xy85x"]
 

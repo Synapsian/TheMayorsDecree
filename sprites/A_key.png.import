@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eu8lyt71nj8"
-path="res://.godot/imported/arrowfix.png-05ec0618ea874d2425c28bec82bec994.ctex"
+uid="uid://bafm0kojbao4q"
+path="res://.godot/imported/A_key.png-e872e19397f77249ae7c16ff1e228429.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/arrowfix.png"
-dest_files=["res://.godot/imported/arrowfix.png-05ec0618ea874d2425c28bec82bec994.ctex"]
+source_file="res://sprites/A_key.png"
+dest_files=["res://.godot/imported/A_key.png-e872e19397f77249ae7c16ff1e228429.ctex"]
 
 [params]
 

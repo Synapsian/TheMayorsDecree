@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 	if not Input.is_action_just_pressed("Interact"): return
 	interaction_debounce = true
 	print("Starting Dialogue")
-	Dialogue.start_dialogue("Hey it's me, sans undertale",$sprite,1)
+	Dialogue.start_dialogue(get_meta("Dialogue"),$sprite,1)
 	await Dialogue.dialogue_finished
 	print("Dialogue Finished")
 	interaction_debounce = false
