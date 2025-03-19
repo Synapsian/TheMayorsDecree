@@ -149,6 +149,7 @@ position = Vector2(198, -2677)
 script = ExtResource("9_agpxb")
 metadata/_edit_group_ = true
 metadata/Position = Vector2(500, 450)
+metadata/InteractSignal = false
 
 [node name="Hitbox" type="CollisionShape2D" parent="Transition2"]
 shape = SubResource("RectangleShape2D_ug2qr")

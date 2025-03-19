@@ -7,7 +7,6 @@ func _create_new_label(text: String):
 	var new_label = Label.new()
 	new_label.text = text.to_upper()
 	new_label.name = "Task" + str(task_list.get_child_count())
-	
 	# Formatting
 	new_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	new_label.set("theme_override_fonts/font",font)
@@ -15,10 +14,22 @@ func _create_new_label(text: String):
 	task_list.add_child(new_label)
 	return new_label
 
-func add_task(task: String, completion_signal: Signal):
+func add_task(task: String, completion_signal: Signal, quest_location: Vector2, on_complete):
 	var new_label = _create_new_label(task)
+	new_label.set_meta("target_location",quest_location)
 	await completion_signal
+	on_complete.call()
 	new_label.queue_free()
+
+func get_target_location():
+	if task_list.get_child_count() <= 1:
+		return false
+	var top_task = task_list.get_child(1)
+	if not top_task:
+		return false
+	if top_task.has_meta("target_location"):
+		return top_task.get_meta("target_location")
+	return false
 
 func complete_task(task: String):
 	pass
