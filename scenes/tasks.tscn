@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ke8fk4oe4r77"]
+[gd_scene load_steps=3 format=3 uid="uid://ke8fk4oe4r77"]
 
+[ext_resource type="Script" uid="uid://d2l2we4pptnkx" path="res://scenes/tasks.gd" id="1_820ab"]
 [ext_resource type="FontFile" uid="uid://cf50jb0yimike" path="res://fonts/GeosansLight.ttf" id="1_ydwq0"]
 
 [node name="tasks" type="CanvasLayer"]
+script = ExtResource("1_820ab")
 
 [node name="container" type="ColorRect" parent="."]
 self_modulate = Color(0, 0, 0, 0.176471)
@@ -44,13 +46,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label" type="Label" parent="container/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_ydwq0")
 text = "GO TO WORK"
-horizontal_alignment = 1
-
-[node name="Label2" type="Label" parent="container/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_ydwq0")
-text = "ANOTHER IMPORTANT TASK"
 horizontal_alignment = 1

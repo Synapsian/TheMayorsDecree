@@ -1,7 +1,12 @@
 extends Area2D
 
 signal set_position(x,y)
+signal interact_signal
 var interaction_debounce = false
+
+func _ready() -> void:
+	if get_meta("InteractSignal") == true:
+		Tasks.add_task("cool quest 1",interact_signal)
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Interact") and $Hitbox.get_meta("PlayerInside") == true:
@@ -16,6 +21,9 @@ func _process(delta: float) -> void:
 			body.set_meta("transition_debounce",true)
 		if body == null: return
 		set_position.emit(get_meta("Position"))
+		
+		if get_meta("InteractSignal"):
+			interact_signal.emit()
 		
 		var newtimer = Timer.new()
 		newtimer.wait_time = 3
