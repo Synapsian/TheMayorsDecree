@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dy5cgr3ujiuuc" path="res://tiles/dirt.png" id="8_cmre7"]
 [ext_resource type="Script" uid="uid://dqqryne24xs10" path="res://scenes/transition.gd" id="9_agpxb"]
 [ext_resource type="Texture2D" uid="uid://38qmkmfx20bm" path="res://tiles/door-pixilart.png" id="9_m2tjr"]
-[ext_resource type="Texture2D" uid="uid://gkoa16u0ehbw" path="res://sprites/pixil-arrow.png" id="10_bsbqf"]
+[ext_resource type="Texture2D" uid="uid://gkoa16u0ehbw" path="res://sprites/Arrow.png" id="10_bsbqf"]
 [ext_resource type="Texture2D" uid="uid://cv7mbbpd84lih" path="res://sprites/parallax/sky.png" id="11_ib0vl"]
 [ext_resource type="Texture2D" uid="uid://csuacr148jq7n" path="res://sprites/parallax/layer2fix.png" id="12_l64x6"]
 [ext_resource type="Texture2D" uid="uid://bas6hhgc6p7f1" path="res://sprites/parallax/layer1.png" id="13_wepko"]
@@ -148,7 +148,7 @@ texture = ExtResource("10_bsbqf")
 position = Vector2(198, -2677)
 script = ExtResource("9_agpxb")
 metadata/_edit_group_ = true
-metadata/Position = Vector2(500, 450)
+metadata/Position = Vector2(1283, 658)
 metadata/InteractSignal = false
 
 [node name="Hitbox" type="CollisionShape2D" parent="Transition2"]
@@ -186,7 +186,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("13_wepko")
 
 [node name="NPC" parent="." instance=ExtResource("14_y2xma")]
-position = Vector2(573, 692)
+position = Vector2(578, 670)
 scale = Vector2(2, 2)
 metadata/Dialogue = "Want to buy a hotdog?"
 

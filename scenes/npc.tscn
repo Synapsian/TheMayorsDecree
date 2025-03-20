@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cfv5dv5mfyfrj"]
 
-[ext_resource type="Texture2D" uid="uid://dtea0e28gk2ha" path="res://sprites/npcs/test_npc.png" id="1_anodm"]
 [ext_resource type="Script" uid="uid://0ottliew87o7" path="res://scenes/npc.gd" id="1_kdklt"]
+[ext_resource type="Texture2D" uid="uid://wemm0dpgnyvb" path="res://sprites/npcs/temp_npc.png" id="2_rv78h"]
 [ext_resource type="Texture2D" uid="uid://ckj3iay36xqv4" path="res://sprites/W_key.png" id="3_rv78h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h6ju2"]
@@ -18,15 +18,18 @@ scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_h6ju2")
 
 [node name="sprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_anodm")
+position = Vector2(3.75, -2.86102e-06)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_rv78h")
 offset = Vector2(-5, 0)
 
 [node name="arrow" type="TextureRect" parent="."]
 visible = false
-offset_left = -16.0
-offset_top = -80.0
-offset_right = 16.0
-offset_bottom = -48.0
+offset_left = -8.0
+offset_top = -72.0
+offset_right = 24.0
+offset_bottom = -40.0
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_rv78h")
 stretch_mode = 3
 

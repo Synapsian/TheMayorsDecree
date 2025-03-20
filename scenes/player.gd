@@ -24,7 +24,7 @@ func display_keys():
 		tween.tween_property(keys[3],"modulate:a",0,0.5)
 		controlsDebounce = false
 	
-func update_quest_location():
+func _update_quest_location():
 	var target_location = Tasks.get_target_location()
 	if not target_location:
 		set_meta("quest_location",Vector2(0,0))
@@ -32,7 +32,7 @@ func update_quest_location():
 	set_meta("quest_location",target_location)
 
 func _physics_process(delta: float) -> void:
-	update_quest_location()
+	_update_quest_location()
 	var quest_location = get_meta("quest_location")
 	if quest_location:
 		arrow.visible = true

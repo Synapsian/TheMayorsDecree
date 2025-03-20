@@ -1,11 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://c8qaq5x2p02bk"]
 
 [ext_resource type="Script" uid="uid://daw7c1uk2706p" path="res://scenes/dialogue.gd" id="1_4pmsi"]
-[ext_resource type="Texture2D" uid="uid://dtea0e28gk2ha" path="res://sprites/npcs/test_npc.png" id="1_hl4xa"]
 [ext_resource type="FontFile" uid="uid://shvvdl5e4cdy" path="res://fonts/SimplySquare.ttf" id="2_xy85x"]
+[ext_resource type="Texture2D" uid="uid://wemm0dpgnyvb" path="res://sprites/npcs/temp_npc.png" id="3_bfpow"]
 
 [node name="dialogue" type="CanvasLayer"]
-visible = false
 script = ExtResource("1_4pmsi")
 
 [node name="container" type="ColorRect" parent="."]
@@ -39,7 +38,7 @@ offset_bottom = 127.0
 [node name="RichTextLabel" type="RichTextLabel" parent="container/outline"]
 z_index = 1
 layout_mode = 0
-offset_left = 63.0
+offset_left = 131.0
 offset_top = 28.0
 offset_right = 502.0
 offset_bottom = 101.0
@@ -50,7 +49,7 @@ shortcut_keys_enabled = false
 
 [node name="Sprite2D" type="Sprite2D" parent="container/outline"]
 z_index = 1
-position = Vector2(27, 65)
-texture = ExtResource("1_hl4xa")
+position = Vector2(65, 65)
+texture = ExtResource("3_bfpow")
 
 [node name="Timer" type="Timer" parent="container/outline"]

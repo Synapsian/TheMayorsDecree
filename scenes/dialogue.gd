@@ -6,9 +6,29 @@ signal dialogue_finished
 @onready var timer = $container/outline/Timer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	_get_dialogue_from_file("res://dialogues/test_npc.json")
 	visible = false
 
-func start_dialogue(new_text: String, new_sprite: Sprite2D, time: int):
+func _get_dialogue_from_file(path: NodePath):
+	print("Getting file")
+	var text_content = FileAccess.get_file_as_string(path)
+	var dictionary = JSON.parse_string(text_content)
+	if dictionary:
+		return dictionary
+	return false
+
+func _default_function():
+	print("Dialogue called default function")
+
+func start_dialogue(dialogue_path: NodePath, time: int, function = _default_function):
+	var dictionary = _get_dialogue_from_file(dialogue_path)
+	if not dictionary: 
+		print("Failed to get dictionary")
+		return
+	var new_text = dictionary.message
+	var new_sprite;
+	print(new_sprite.name)
+	
 	visible = true
 	sprite = new_sprite
 	
@@ -28,6 +48,7 @@ func start_dialogue(new_text: String, new_sprite: Sprite2D, time: int):
 	await timer.timeout
 	visible = false
 	dialogue_finished.emit()
+	function.call()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

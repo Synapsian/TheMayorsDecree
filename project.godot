@@ -13,7 +13,6 @@ config_version=5
 config/name="The Mayor's Decree"
 run/main_scene="res://scenes/world_mayor.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://sprites/aaaa.svg"
 
 [autoload]
 

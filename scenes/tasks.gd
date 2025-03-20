@@ -14,7 +14,10 @@ func _create_new_label(text: String):
 	task_list.add_child(new_label)
 	return new_label
 
-func add_task(task: String, completion_signal: Signal, quest_location: Vector2, on_complete):
+func default_function():
+	print("Task called default function")
+
+func add_task(task: String, completion_signal: Signal, quest_location: Vector2, on_complete = default_function):
 	var new_label = _create_new_label(task)
 	new_label.set_meta("target_location",quest_location)
 	await completion_signal
