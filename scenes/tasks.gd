@@ -33,6 +33,3 @@ func get_target_location():
 	if top_task.has_meta("target_location"):
 		return top_task.get_meta("target_location")
 	return false
-
-func complete_task(task: String):
-	pass

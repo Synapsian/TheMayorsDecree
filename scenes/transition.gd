@@ -15,7 +15,7 @@ func _ready() -> void:
 	if get_meta("InteractSignal") == true:
 		Tasks.add_task("go to work",interact_signal,Vector2(1283.0,658.0),complete_first_task)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("Interact") and $Hitbox.get_meta("PlayerInside") == true:
 		var bodies = get_overlapping_bodies()
 		var body = null

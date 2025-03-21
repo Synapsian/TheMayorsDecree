@@ -55,7 +55,3 @@ func start_dialogue(dialogue_path: NodePath, time: int, function = _default_func
 	visible = false
 	dialogue_finished.emit()
 	function.call()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

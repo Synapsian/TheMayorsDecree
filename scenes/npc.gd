@@ -8,7 +8,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 var interaction_debounce = false
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if get_meta("player_inside") == false or interaction_debounce == true: return
 	if not Input.is_action_just_pressed("Interact"): return
 	interaction_debounce = true
