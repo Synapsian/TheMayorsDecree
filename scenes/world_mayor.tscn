@@ -188,7 +188,8 @@ texture = ExtResource("13_wepko")
 [node name="NPC" parent="." instance=ExtResource("14_y2xma")]
 position = Vector2(578, 670)
 scale = Vector2(2, 2)
-metadata/Dialogue = "Want to buy a hotdog?"
+metadata/DialoguePath = "res://dialogues/test_npc.json"
+metadata/DialogueSpeed = 1.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -5

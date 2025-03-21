@@ -12,7 +12,12 @@ func _process(delta: float) -> void:
 	if get_meta("player_inside") == false or interaction_debounce == true: return
 	if not Input.is_action_just_pressed("Interact"): return
 	interaction_debounce = true
-	Dialogue.start_dialogue("res://dialogues/test_npc.json",1)
+	
+	var dialogue_path = get_meta("DialoguePath")
+	var dialogue_speed = get_meta("DialogueSpeed")
+	
+	Dialogue.start_dialogue(dialogue_path,dialogue_speed)
+	
 	await Dialogue.dialogue_finished
 	interaction_debounce = false
 

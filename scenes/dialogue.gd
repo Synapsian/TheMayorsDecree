@@ -6,7 +6,6 @@ signal dialogue_finished
 @onready var timer = $container/outline/Timer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	_get_dialogue_from_file("res://dialogues/test_npc.json")
 	visible = false
 
 func _get_dialogue_from_file(path: NodePath):
@@ -26,11 +25,18 @@ func start_dialogue(dialogue_path: NodePath, time: int, function = _default_func
 		print("Failed to get dictionary")
 		return
 	var new_text = dictionary.message
-	var new_sprite;
-	print(new_sprite.name)
+	
+	var image = Image.new()
+	var err = image.load(dictionary.sprite)
+	if err != OK:
+		pass
+	var texture = ImageTexture.new()
+	texture = load(dictionary.sprite)
+	sprite.texture = texture
+	
+	#texture.create_from_image(image)
 	
 	visible = true
-	sprite = new_sprite
 	
 	var temp_text = " "
 	for letter in new_text:

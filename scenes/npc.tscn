@@ -9,7 +9,8 @@
 [node name="NPC" type="Node2D"]
 script = ExtResource("1_kdklt")
 metadata/player_inside = false
-metadata/Dialogue = ""
+metadata/DialoguePath = ""
+metadata/DialogueSpeed = 0
 
 [node name="interaction_area" type="Area2D" parent="."]
 
