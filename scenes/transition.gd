@@ -9,11 +9,11 @@ signal placeholder
 func complete_second_task():
 	pass
 func complete_first_task():
-	Tasks.add_task("Manage your workers",placeholder,Vector2(1,1),complete_second_task)
+	Tasks.add_task("Take your seat",placeholder,Vector2(1,1),complete_second_task)
 
 func _ready() -> void:
 	if get_meta("InteractSignal") == true:
-		Tasks.add_task("go to work",interact_signal,Vector2(1283.0,658.0),complete_first_task)
+		Tasks.add_task("Enter city hall",interact_signal,Vector2(1283.0,658.0),complete_first_task)
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("Interact") and $Hitbox.get_meta("PlayerInside") == true:
