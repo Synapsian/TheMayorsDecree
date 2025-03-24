@@ -44,7 +44,10 @@ func start_dialogue(dialogue_path: NodePath, time: int, function = _default_func
 		text_input.text = temp_text
 		var temp_timer = Timer.new()
 		temp_timer.one_shot = true
-		temp_timer.wait_time = 0.02
+		if letter == ".":
+			temp_timer.wait_time = 0.25
+		else:
+			temp_timer.wait_time = 0.02
 		add_child(temp_timer)
 		temp_timer.start()
 		await temp_timer.timeout

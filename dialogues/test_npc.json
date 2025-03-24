@@ -1,4 +1,4 @@
 {
-	"message": "Hi, I sell hotdogs",
-	"sprite": "res://sprites/npcs/temp_npc.png",
+	"message": "... Why are you talking to me?",
+	"sprite": "res://sprites/npcs/NPC_still.png",
 }
