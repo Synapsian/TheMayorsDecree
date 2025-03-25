@@ -17,6 +17,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("Interact") and $Hitbox.get_meta("PlayerInside") == true:
+		print("Interact")
 		var bodies = get_overlapping_bodies()
 		var body = null
 		for index in len(bodies):
@@ -27,6 +28,7 @@ func _process(_delta: float) -> void:
 			if body.get_meta("transition_debounce") == true: return
 			body.set_meta("transition_debounce",true)
 		if body == null: return
+		print("Setting position")
 		set_position.emit(get_meta("Position"))
 		
 		if get_meta("InteractSignal"):
@@ -42,6 +44,7 @@ func _process(_delta: float) -> void:
 		body.set_meta("transition_debounce",false)
 
 func _on_body_entered(body: Node2D) -> void:
+	print(body.name)
 	if not body.name == "character": return
 	$Hitbox.set_meta("PlayerInside",true)
 	if not $Arrow.visible:

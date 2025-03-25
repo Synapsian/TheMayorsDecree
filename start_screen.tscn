@@ -47,3 +47,5 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_ncxyx")
 theme_override_font_sizes/font_size = 40
 text = "START"
+
+[connection signal="pressed" from="container/start" to="." method="_on_start_pressed"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://o0plor4y2d4j"]
+
+[ext_resource type="Script" uid="uid://dqqryne24xs10" path="res://scenes/transition.gd" id="1_pj2mc"]
+[ext_resource type="Texture2D" uid="uid://gkoa16u0ehbw" path="res://sprites/Arrow.png" id="2_4r5tf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ap01"]
+size = Vector2(186, 216)
+
+[node name="Transition" type="Area2D"]
+script = ExtResource("1_pj2mc")
+metadata/_edit_group_ = true
+metadata/Position = Vector2(200, -2677)
+metadata/InteractSignal = true
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1ap01")
+metadata/PlayerInside = false
+
+[node name="Arrow" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -100)
+scale = Vector2(2, 2)
+texture = ExtResource("2_4r5tf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

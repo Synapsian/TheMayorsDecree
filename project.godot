@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="The Mayor's Decree"
-run/main_scene="res://scenes/world_mayor.tscn"
+run/main_scene="uid://b066gd02iaw4b"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
 [autoload]
 
 TransitionScreen="*res://scenes/transition_screen.tscn"
 Dialogue="*res://scenes/dialogue.tscn"
+Tasks="*res://scenes/tasks.tscn"
 
 [input]
 

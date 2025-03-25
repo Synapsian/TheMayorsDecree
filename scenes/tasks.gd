@@ -23,6 +23,9 @@ func add_task(task: String, completion_signal: Signal, quest_location: Vector2, 
 	await completion_signal
 	on_complete.call()
 	new_label.queue_free()
+	
+func change_visibility(visibility: bool):
+	visible = visibility
 
 func get_target_location():
 	if task_list.get_child_count() <= 1:
