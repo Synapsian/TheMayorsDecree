@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://bscoj03tyv50b"]
+
+[ext_resource type="Script" uid="uid://bgi2qxk2ydcf8" path="res://decree.gd" id="1_30x0s"]
+[ext_resource type="Texture2D" uid="uid://uiqcapty3kyq" path="res://sprites/decree.png" id="1_ybaby"]
+
+[node name="decree" type="Node2D"]
+script = ExtResource("1_30x0s")
+
+[node name="container" type="ColorRect" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="sprite" type="Sprite2D" parent="container"]
+position = Vector2(584, 256)
+texture = ExtResource("1_ybaby")
+
+[node name="text" type="Label" parent="container"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -66.0
+offset_top = -155.0
+offset_right = 66.0
+offset_bottom = -132.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "This decree will..."
+
+[node name="list" type="VBoxContainer" parent="container"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.0
+offset_top = 196.0
+offset_right = 86.0
+offset_bottom = 316.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="buff" type="Label" parent="container/list"]
+visible = false
+modulate = Color(0, 1, 0, 1)
+layout_mode = 2
+text = "+ Solve World Hunger"
+
+[node name="debuff" type="Label" parent="container/list"]
+visible = false
+modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+text = "- Help the homeless"
+
+[node name="accept" type="Button" parent="container/list"]
+visible = false
+layout_mode = 2
+text = "Accept"
+
+[node name="decline" type="Button" parent="container/list"]
+visible = false
+layout_mode = 2
+text = "Decline"
