@@ -39,6 +39,9 @@ func _physics_process(delta: float) -> void:
 		arrow.look_at(quest_location)
 	else:
 		arrow.visible = false
+		
+	if get_meta("anchored"):
+		return
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta

@@ -2,14 +2,15 @@ extends Area2D
 
 signal set_position(x,y)
 signal interact_signal
+signal seat_taken
 var interaction_debounce = false
 
-signal placeholder
 
 func complete_second_task():
-	pass
+	print("Second task completed")
+
 func complete_first_task():
-	Tasks.add_task("Take your seat",placeholder,Vector2(1,1),complete_second_task)
+	Tasks.add_task("Take your seat",seat_taken,Vector2(1568.0,-2690.0),complete_second_task)
 
 func _ready() -> void:
 	if get_meta("InteractSignal") == true:
@@ -60,3 +61,7 @@ func _on_body_exited(body: Node2D) -> void:
 	$Arrow.modulate.a = 1
 	var tween = get_tree().create_tween()
 	tween.tween_property($Arrow,"modulate:a",0,0.5)
+
+
+func _on_chair_throne_used() -> void:
+	seat_taken.emit()
