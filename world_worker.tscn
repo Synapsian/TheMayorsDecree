@@ -1,0 +1,141 @@
+[gd_scene load_steps=23 format=4 uid="uid://d3e8chpn8ij4n"]
+
+[ext_resource type="Texture2D" uid="uid://bjme7yxj85j1w" path="res://tiles/brick.png" id="1_iblr0"]
+[ext_resource type="Texture2D" uid="uid://crn0k306qo2wn" path="res://tiles/grass.png" id="2_hny7u"]
+[ext_resource type="Texture2D" uid="uid://dsdrrgvusahqn" path="res://tiles/town_hall_marble.png" id="3_71vic"]
+[ext_resource type="Texture2D" uid="uid://cumkuouqirfgj" path="res://tiles/table.png" id="4_dndp6"]
+[ext_resource type="Texture2D" uid="uid://bx7pqdahjw5pv" path="res://tiles/temp_tileset.png" id="5_b1uiw"]
+[ext_resource type="Texture2D" uid="uid://dc3dxyuvkuouc" path="res://tiles/chair.png" id="6_sg7sg"]
+[ext_resource type="Texture2D" uid="uid://dvucpb78fbtmb" path="res://tiles/wood.png" id="7_knomi"]
+[ext_resource type="Texture2D" uid="uid://dy5cgr3ujiuuc" path="res://tiles/dirt.png" id="8_upaqt"]
+[ext_resource type="Texture2D" uid="uid://38qmkmfx20bm" path="res://tiles/door-pixilart.png" id="9_hn8qf"]
+[ext_resource type="Texture2D" uid="uid://dtn77wmadmipi" path="res://tiles/THRONE.png" id="10_f6afu"]
+[ext_resource type="PackedScene" uid="uid://n0rgydpdohbv" path="res://worker.tscn" id="11_hny7u"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fwvsa"]
+texture = ExtResource("1_iblr0")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_elba4"]
+texture = ExtResource("2_hny7u")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5cy4j"]
+texture = ExtResource("3_71vic")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6oooy"]
+texture = ExtResource("4_dndp6")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4fxcv"]
+texture = ExtResource("5_b1uiw")
+texture_region_size = Vector2i(64, 64)
+7:4/size_in_atlas = Vector2i(2, 1)
+7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, 32, 64, 32, 64, -32, -64, -32)
+10:4/size_in_atlas = Vector2i(2, 1)
+10:4/0 = 0
+10:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, 32, 64, 32, 64, -32, -64, -32)
+19:4/size_in_atlas = Vector2i(2, 2)
+19:4/0 = 0
+1:4/size_in_atlas = Vector2i(2, 2)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+4:4/size_in_atlas = Vector2i(2, 2)
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+13:5/size_in_atlas = Vector2i(2, 1)
+13:5/0 = 0
+13:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, 32, 64, 32, 64, -32, -64, -32)
+16:4/size_in_atlas = Vector2i(2, 2)
+16:4/0 = 0
+19:1/size_in_atlas = Vector2i(2, 2)
+19:1/0 = 0
+19:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+16:1/size_in_atlas = Vector2i(2, 2)
+16:1/0 = 0
+13:1/size_in_atlas = Vector2i(2, 2)
+13:1/0 = 0
+10:1/size_in_atlas = Vector2i(2, 2)
+10:1/0 = 0
+10:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+7:1/size_in_atlas = Vector2i(2, 2)
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+4:1/size_in_atlas = Vector2i(2, 2)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+1:1/size_in_atlas = Vector2i(2, 2)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+1:7/size_in_atlas = Vector2i(2, 2)
+1:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xjpw"]
+texture = ExtResource("6_sg7sg")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vrkto"]
+texture = ExtResource("7_knomi")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5txlr"]
+texture = ExtResource("8_upaqt")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l5ya4"]
+texture = ExtResource("9_hn8qf")
+texture_region_size = Vector2i(128, 128)
+1:0/0 = 0
+0:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_whnhw"]
+texture = ExtResource("10_f6afu")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/z_index = 10
+1:0/0 = 0
+1:0/0/z_index = 10
+0:1/0 = 0
+0:1/0/z_index = 10
+1:1/0 = 0
+1:1/0/z_index = 10
+
+[sub_resource type="TileSet" id="TileSet_pn3ve"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/3 = SubResource("TileSetAtlasSource_4fxcv")
+sources/0 = SubResource("TileSetAtlasSource_fwvsa")
+sources/1 = SubResource("TileSetAtlasSource_elba4")
+sources/2 = SubResource("TileSetAtlasSource_6oooy")
+sources/4 = SubResource("TileSetAtlasSource_5xjpw")
+sources/5 = SubResource("TileSetAtlasSource_vrkto")
+sources/6 = SubResource("TileSetAtlasSource_5txlr")
+sources/7 = SubResource("TileSetAtlasSource_l5ya4")
+sources/8 = SubResource("TileSetAtlasSource_whnhw")
+sources/10 = SubResource("TileSetAtlasSource_5cy4j")
+
+[node name="world_worker" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(135, 245)
+tile_map_data = PackedByteArray("AAD+/wMABQAAAAAAAAD//wMABQAAAAAAAAAAAAMABQAAAAAAAAABAAMABQAAAAAAAAACAAMABQAAAAAAAAADAAMABQAAAAAAAAAEAAMABQAAAAAAAAAFAAMABQAAAAAAAAAGAAMABQAAAAAAAAD9/wMABQAAAAAAAAD9/wIABQAAAAAAAAD9/wEABQAAAAAAAAD9/wAABQAAAAAAAAACAAIABAAAAAAAAAADAAIAAgAAAAAAAAAEAAIABAAAAAAAABAGAAEABwAAAAAAAAAGAAIABwAAAAEAAAAHAAMABQAAAAAAAAAIAAMABQAAAAAAAAAIAAIABQAAAAAAAAAIAAEABQAAAAAAAAAIAAAABQAAAAAAAAAIAP//BQAAAAAAAAAIAP7/BQAAAAAAAAAHAP7/BQAAAAAAAAAGAP7/BQAAAAAAAAAFAP7/BQAAAAAAAAAEAP7/BQAAAAAAAAADAP7/BQAAAAAAAAACAP7/BQAAAAAAAAABAP7/BQAAAAAAAAAAAP7/BQAAAAAAAAD///7/BQAAAAAAAAD+//7/BQAAAAAAAAD9//7/BQAAAAAAAAD9////BQAAAAAAAAA=")
+tile_set = SubResource("TileSet_pn3ve")
+
+[node name="worker" parent="." instance=ExtResource("11_hny7u")]
+position = Vector2(-54, 564)
+scale = Vector2(2, 2)

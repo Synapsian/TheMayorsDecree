@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=3 uid="uid://trnr05ftt3c8"]
 
-[ext_resource type="Script" uid="uid://rafd1m8j3p5d" path="res://scenes/player.gd" id="1_qdl6m"]
+[ext_resource type="Script" uid="uid://rafd1m8j3p5d" path="res://scenes/mayor.gd" id="1_qdl6m"]
 [ext_resource type="Texture2D" uid="uid://h8fnqbkj1nsr" path="res://sprites/player/IDLE.png" id="2_70mkq"]
 [ext_resource type="Texture2D" uid="uid://qfveqauyflo3" path="res://sprites/player/RUN.png" id="3_hujhh"]
 [ext_resource type="Texture2D" uid="uid://ckj3iay36xqv4" path="res://sprites/W_key.png" id="4_fjrip"]
@@ -165,7 +165,7 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="character" type="CharacterBody2D"]
+[node name="mayor" type="CharacterBody2D"]
 script = ExtResource("1_qdl6m")
 metadata/quest_location = Vector2(1283, 658)
 
