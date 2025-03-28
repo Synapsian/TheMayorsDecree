@@ -19,6 +19,7 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 TransitionScreen="*res://scenes/transition_screen.tscn"
 Dialogue="*res://scenes/dialogue.tscn"
 Tasks="*res://scenes/tasks.tscn"
+Decree="*res://decree.tscn"
 
 [input]
 

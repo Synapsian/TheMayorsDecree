@@ -1,5 +1,7 @@
-extends Node2D
+extends CanvasLayer
 
+#signal set_player_meta(name:StringName, value:Variant)
+signal increase_player_income(type:String, value:float)
 @onready var list = $container/list
 @onready var tasks = Tasks
 var buffs = ["You will gain +20% money at the end of the day","End Hunger"]
@@ -7,12 +9,13 @@ var debuffs = ["People will be unhappy at the raise in taxes","Lose 5 dollars ev
 
 func _ready() -> void:
 	visible = false
-	new_decree()
 
 func _give_effects(buff_index:int,to_free:Array):
 	print("Give effects, index: " + str(buff_index))
 	if buff_index == 0:
-		print("Give buff 0 effects")
+		# +20% taxes
+		print("Increasing player income by 20%")
+		increase_player_income.emit("Percent",20.0)
 	_remove_decree(to_free)
 
 func _remove_decree(to_free:Array):
@@ -20,6 +23,7 @@ func _remove_decree(to_free:Array):
 		item.queue_free()
 	visible = false
 	tasks.show()
+	new_decree()
 
 func new_decree():
 	visible = true

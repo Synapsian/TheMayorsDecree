@@ -3,13 +3,14 @@
 [ext_resource type="Script" uid="uid://bgi2qxk2ydcf8" path="res://decree.gd" id="1_30x0s"]
 [ext_resource type="Texture2D" uid="uid://uiqcapty3kyq" path="res://sprites/decree.png" id="1_ybaby"]
 
-[node name="decree" type="Node2D"]
+[node name="decree" type="CanvasLayer"]
 script = ExtResource("1_30x0s")
 
 [node name="container" type="ColorRect" parent="."]
 self_modulate = Color(1, 1, 1, 0)
 offset_right = 1152.0
 offset_bottom = 648.0
+metadata/_edit_group_ = true
 
 [node name="sprite" type="Sprite2D" parent="container"]
 position = Vector2(584, 256)

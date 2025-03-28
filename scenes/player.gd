@@ -88,3 +88,16 @@ func _on_transition_set_position(new_position: Vector2) -> void:
 	TransitionScreen.transition()
 	await TransitionScreen.on_transition_finished
 	position = new_position
+
+
+func _on_decree_increase_player_income(type: String, value: float) -> void:
+	var current_income = get_meta("money_to_earn")
+	if type == "Percent":
+		var new_income = (current_income * value/100) + current_income
+		set_meta("money_to_earn",new_income)
+		print("Increased money to " + str(new_income))
+	else:
+		push_warning("Couldn't find type " + type + " for player_income")
+
+func _ready() -> void:
+	Decree.increase_player_income.connect(_on_decree_increase_player_income)
