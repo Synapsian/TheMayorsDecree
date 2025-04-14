@@ -1,14 +1,16 @@
 extends Area2D
 
+signal placeholder
+
 signal set_position(x,y)
 signal interact_signal
 signal seat_taken
 var interaction_debounce = false
 
-
 func complete_second_task():
 	Tasks.hide()
 	Decree.new_decree()
+	Tasks.add_task("Exit the building",placeholder,Vector2(0,0))
 
 func complete_first_task():
 	Tasks.add_task("Take your seat",seat_taken,Vector2(1568.0,-2690.0),complete_second_task)

@@ -99,5 +99,9 @@ func _on_decree_increase_player_income(type: String, value: float) -> void:
 	else:
 		push_warning("Couldn't find type " + type + " for player_income")
 
+func unanchor():
+	set_meta("anchored",false)
+
 func _ready() -> void:
 	Decree.increase_player_income.connect(_on_decree_increase_player_income)
+	Decree.on_decree_finished.connect(unanchor)

@@ -2,6 +2,7 @@ extends CanvasLayer
 
 #signal set_player_meta(name:StringName, value:Variant)
 signal increase_player_income(type:String, value:float)
+signal on_decree_finished()
 @onready var list = $container/list
 @onready var tasks = Tasks
 var buffs = ["You will gain +20% money at the end of the day","End Hunger"]
@@ -23,7 +24,8 @@ func _remove_decree(to_free:Array):
 		item.queue_free()
 	visible = false
 	tasks.show()
-	new_decree()
+	on_decree_finished.emit()
+	#new_decree()
 
 func new_decree():
 	visible = true
