@@ -17,12 +17,17 @@ func _create_new_label(text: String):
 func default_function():
 	print("Task called default function")
 
-func add_task(task: String, completion_signal: Signal, quest_location: Vector2, on_complete = default_function):
-	var new_label = _create_new_label(task)
+func add_task(task_name: String,text_contents: String, completion_signal: Signal, quest_location: Vector2, on_complete = default_function, args = null):
+	var new_label = _create_new_label(text_contents)
 	new_label.set_meta("target_location",quest_location)
 	await completion_signal
 	on_complete.call()
 	new_label.queue_free()
+	
+func process_task(task_name):
+	if task_name == "first_mayor_transition":
+		print("Do first task things")
+		return
 	
 func change_visibility(visibility: bool):
 	visible = visibility

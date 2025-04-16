@@ -141,7 +141,7 @@ size = Vector2(198, 236)
 
 [node name="character" parent="." instance=ExtResource("1_g00bn")]
 z_index = 5
-position = Vector2(57, 420)
+position = Vector2(57, 573)
 metadata/transition_debounce = false
 metadata/anchored = false
 metadata/money = 1000.0
@@ -193,6 +193,10 @@ color = Color(0, 0, 0, 1)
 [node name="Transition" parent="." instance=ExtResource("14_wd708")]
 position = Vector2(1287, 639)
 
+[node name="teleport_location" parent="Transition" index="2"]
+position = Vector2(-1087, -3322)
+gizmo_extents = 0.0
+
 [node name="chair" type="Area2D" parent="."]
 script = ExtResource("16_6tfbc")
 
@@ -201,7 +205,20 @@ position = Vector2(1568, -2690)
 shape = SubResource("RectangleShape2D_d0fr2")
 metadata/PlayerInside = false
 
+[node name="Transition2" parent="." instance=ExtResource("14_wd708")]
+position = Vector2(202, -2686)
+metadata/InteractSignal = false
+metadata/Enabled = false
+metadata/Position = Vector2(1287, 639)
+
+[node name="teleport_location" parent="Transition2" index="2"]
+position = Vector2(1087, 3325)
+
 [connection signal="set_position" from="Transition" to="character" method="_on_transition_set_position"]
 [connection signal="body_entered" from="chair" to="chair" method="_on_body_entered"]
 [connection signal="body_exited" from="chair" to="chair" method="_on_body_exited"]
 [connection signal="throne_used" from="chair" to="Transition" method="_on_chair_throne_used"]
+[connection signal="enable_transition" from="Transition2" to="Transition2" method="_on_enable_transition"]
+
+[editable path="Transition"]
+[editable path="Transition2"]

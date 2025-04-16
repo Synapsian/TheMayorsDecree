@@ -21,6 +21,10 @@ Dialogue="*res://scenes/dialogue.tscn"
 Tasks="*res://scenes/tasks.tscn"
 Decree="*res://decree.tscn"
 
+[global_group]
+
+Player="Worker/Mayor Character"
+
 [input]
 
 Interact={

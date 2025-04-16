@@ -8,9 +8,8 @@ size = Vector2(186, 216)
 
 [node name="Transition" type="Area2D"]
 script = ExtResource("1_pj2mc")
-metadata/_edit_group_ = true
-metadata/Position = Vector2(200, -2677)
 metadata/InteractSignal = true
+metadata/Enabled = true
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_1ap01")
@@ -21,6 +20,8 @@ visible = false
 position = Vector2(0, -100)
 scale = Vector2(2, 2)
 texture = ExtResource("2_4r5tf")
+
+[node name="teleport_location" type="Marker2D" parent="."]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

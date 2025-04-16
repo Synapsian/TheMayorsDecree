@@ -165,7 +165,7 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="mayor" type="CharacterBody2D"]
+[node name="mayor" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_qdl6m")
 metadata/quest_location = Vector2(1283, 658)
 
