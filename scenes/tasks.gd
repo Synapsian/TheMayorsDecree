@@ -17,17 +17,32 @@ func _create_new_label(text: String):
 func default_function():
 	print("Task called default function")
 
+var on_complete_functions = {}
+var labels = {}
+
 func add_task(task_name: String,text_contents: String, completion_signal: Signal, quest_location: Vector2, on_complete = default_function, args = null):
 	var new_label = _create_new_label(text_contents)
 	new_label.set_meta("target_location",quest_location)
-	await completion_signal
-	on_complete.call()
-	new_label.queue_free()
 	
-func process_task(task_name):
-	if task_name == "first_mayor_transition":
-		print("Do first task things")
-		return
+	on_complete_functions[task_name] = on_complete
+	labels[task_name] = new_label
+	
+	# // Replace this with own function
+	await completion_signal
+	complete_task(task_name)
+	#on_complete.call()
+	#new_label.queue_free()
+	# \\
+	
+func complete_task(task_name):
+	if not on_complete_functions[task_name]: return
+	var on_complete = on_complete_functions[task_name]
+	on_complete_functions.erase(task_name) # Gets rid of task_name in dict
+	on_complete.call()
+	
+	if not labels[task_name]: return	
+	var label = labels[task_name]
+	label.queue_free()
 	
 func change_visibility(visibility: bool):
 	visible = visibility
