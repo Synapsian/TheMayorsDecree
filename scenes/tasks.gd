@@ -20,7 +20,7 @@ func default_function():
 var on_complete_functions = {}
 var labels = {}
 
-func add_task(task_name: String,text_contents: String, completion_signal: Signal, quest_location: Vector2, on_complete = default_function, args = null):
+func add_task(task_name: String,text_contents: String, quest_location: Vector2, on_complete = default_function, args = null):
 	var new_label = _create_new_label(text_contents)
 	new_label.set_meta("target_location",quest_location)
 	
@@ -28,8 +28,8 @@ func add_task(task_name: String,text_contents: String, completion_signal: Signal
 	labels[task_name] = new_label
 	
 	# // Replace this with own function
-	await completion_signal
-	complete_task(task_name)
+	#await completion_signal
+	#complete_task(task_name)
 	#on_complete.call()
 	#new_label.queue_free()
 	# \\

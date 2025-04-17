@@ -16,16 +16,19 @@ func complete_second_task():
 	Tasks.hide()
 	Decree.new_decree()
 	enable_transition.emit("Transition2")
-	Tasks.add_task("mayor_exit_building","Exit the building",placeholder,Vector2(0,0))
+	Tasks.add_task("mayor_exit_building","Exit the building",Vector2(0,0))
+	# Complete when mayor exits building
 
 func complete_first_task():
-	Tasks.add_task("mayor_sit_down","Take your seat",seat_taken,Vector2(1568.0,-2690.0),complete_second_task)
+	Tasks.add_task("mayor_sit_down","Take your seat",Vector2(1568.0,-2690.0),complete_second_task)
+	# Complete when mayor sits
 # \\ Tasks
 
 func _ready() -> void:
 	#enable_transition.emit(name)
 	if get_meta("InteractSignal") == true:
-		Tasks.add_task("mayor_first_transition","Enter city hall",interact_signal,Vector2(1283.0,658.0),complete_first_task)
+		Tasks.add_task("mayor_first_transition","Enter city hall",Vector2(1283.0,658.0),complete_first_task)
+		# Complete when first transition is used
 
 func _process(_delta: float) -> void:
 	# Must be enabled, player must be inside, interact button must have just been pressed
@@ -51,7 +54,8 @@ func _process(_delta: float) -> void:
 		get_tree().call_group("Player","transition_set_position",$teleport_location.global_position)
 		
 		if get_meta("InteractSignal"):
-			interact_signal.emit()
+			#interact_signal.emit() Old, from when tasks used signals
+			Tasks.complete_task("mayor_first_transition")
 		
 		# // Creates a new timer, awaits it, and then gets rid of it/
 		var newtimer = Timer.new()
@@ -94,10 +98,6 @@ func _on_body_exited(body: Node2D) -> void:
 	var tween = get_tree().create_tween()
 	tween.tween_property($Arrow,"modulate:a",0,0.5)
 	# \\ Arrow Animation
-
-func _on_chair_throne_used() -> void:
-	seat_taken.emit()
-
 
 func _on_enable_transition(transition_name: Variant) -> void:
 	if name == transition_name:
