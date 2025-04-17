@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cv7mbbpd84lih" path="res://sprites/parallax/sky.png" id="11_ib0vl"]
 [ext_resource type="Texture2D" uid="uid://csuacr148jq7n" path="res://sprites/parallax/layer2fix.png" id="12_l64x6"]
 [ext_resource type="Texture2D" uid="uid://bas6hhgc6p7f1" path="res://sprites/parallax/layer1.png" id="13_wepko"]
-[ext_resource type="PackedScene" uid="uid://o0plor4y2d4j" path="res://transition.tscn" id="14_wd708"]
+[ext_resource type="PackedScene" uid="uid://o0plor4y2d4j" path="res://scenes/transition.tscn" id="14_wd708"]
 [ext_resource type="PackedScene" uid="uid://cfv5dv5mfyfrj" path="res://scenes/npc.tscn" id="14_y2xma"]
 [ext_resource type="Script" uid="uid://bmq8g4bd37hah" path="res://scenes/chair.gd" id="16_6tfbc"]
 
@@ -214,11 +214,10 @@ metadata/Position = Vector2(1287, 639)
 [node name="teleport_location" parent="Transition2" index="2"]
 position = Vector2(1087, 3325)
 
-[connection signal="set_position" from="Transition" to="character" method="_on_transition_set_position"]
+[connection signal="enable_transition" from="Transition" to="Transition2" method="_on_enable_transition"]
 [connection signal="body_entered" from="chair" to="chair" method="_on_body_entered"]
 [connection signal="body_exited" from="chair" to="chair" method="_on_body_exited"]
 [connection signal="throne_used" from="chair" to="Transition" method="_on_chair_throne_used"]
-[connection signal="enable_transition" from="Transition2" to="Transition2" method="_on_enable_transition"]
 
 [editable path="Transition"]
 [editable path="Transition2"]

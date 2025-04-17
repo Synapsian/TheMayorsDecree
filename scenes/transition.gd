@@ -15,6 +15,7 @@ var interaction_debounce = false
 func complete_second_task():
 	Tasks.hide()
 	Decree.new_decree()
+	enable_transition.emit("Transition2")
 	Tasks.add_task("mayor_exit_building","Exit the building",placeholder,Vector2(0,0))
 
 func complete_first_task():
@@ -22,7 +23,7 @@ func complete_first_task():
 # \\ Tasks
 
 func _ready() -> void:
-	enable_transition.emit(name)
+	#enable_transition.emit(name)
 	if get_meta("InteractSignal") == true:
 		Tasks.add_task("mayor_first_transition","Enter city hall",interact_signal,Vector2(1283.0,658.0),complete_first_task)
 
