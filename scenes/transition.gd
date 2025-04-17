@@ -1,9 +1,6 @@
 extends Area2D
 
 # // Signals
-signal placeholder
-signal interact_signal
-signal seat_taken
 signal enable_transition(transition_name)
 # \\ Signals
 
@@ -11,21 +8,18 @@ signal enable_transition(transition_name)
 var interaction_debounce = false
 # \\ Variables
 
-# // Tasks (Remove for own node)
+# // Tasks
 func complete_second_task():
 	Tasks.hide()
 	Decree.new_decree()
 	enable_transition.emit("Transition2")
 	Tasks.add_task("mayor_exit_building","Exit the building",Vector2(0,0))
-	# Complete when mayor exits building
 
 func complete_first_task():
 	Tasks.add_task("mayor_sit_down","Take your seat",Vector2(1568.0,-2690.0),complete_second_task)
-	# Complete when mayor sits
 # \\ Tasks
 
 func _ready() -> void:
-	#enable_transition.emit(name)
 	if get_meta("InteractSignal") == true:
 		Tasks.add_task("mayor_first_transition","Enter city hall",Vector2(1283.0,658.0),complete_first_task)
 		# Complete when first transition is used
@@ -33,7 +27,6 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	# Must be enabled, player must be inside, interact button must have just been pressed
 	if get_meta("Enabled") == true and Input.is_action_just_pressed("Interact") and $Hitbox.get_meta("PlayerInside") == true:
-		print("Interact")
 		
 		# // Loops through all overlapping boddies, if it finds the player it returns it, else becomes null.
 		var bodies = get_overlapping_bodies()
@@ -49,12 +42,11 @@ func _process(_delta: float) -> void:
 		
 		if body == null: return
 		# Ended if player character not found
-		print("Setting position")
+
 		# Calls all objects with the group "Player", then calls the "transition_set_position" function.
 		get_tree().call_group("Player","transition_set_position",$teleport_location.global_position)
 		
 		if get_meta("InteractSignal"):
-			#interact_signal.emit() Old, from when tasks used signals
 			Tasks.complete_task("mayor_first_transition")
 		
 		# // Creates a new timer, awaits it, and then gets rid of it/

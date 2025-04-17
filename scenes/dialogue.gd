@@ -9,7 +9,6 @@ func _ready() -> void:
 	visible = false
 
 func _get_dialogue_from_file(path: NodePath):
-	print("Getting file")
 	var text_content = FileAccess.get_file_as_string(path)
 	var dictionary = JSON.parse_string(text_content)
 	if dictionary:
