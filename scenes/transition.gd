@@ -2,7 +2,6 @@ extends Area2D
 
 # // Signals
 signal placeholder
-signal set_position(x,y)
 signal interact_signal
 signal seat_taken
 signal enable_transition(transition_name)
@@ -47,7 +46,8 @@ func _process(_delta: float) -> void:
 		if body == null: return
 		# Ended if player character not found
 		print("Setting position")
-		set_position.emit($teleport_location.global_position)
+		# Calls all objects with the group "Player", then calls the "transition_set_position" function.
+		get_tree().call_group("Player","transition_set_position",$teleport_location.global_position)
 		
 		if get_meta("InteractSignal"):
 			interact_signal.emit()

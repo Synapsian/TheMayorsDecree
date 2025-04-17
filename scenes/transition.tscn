@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://o0plor4y2d4j"]
 
-[ext_resource type="Script" uid="uid://dqqryne24xs10" path="res://scenes/transition.gd" id="1_pj2mc"]
-[ext_resource type="Texture2D" uid="uid://gkoa16u0ehbw" path="res://sprites/Arrow.png" id="2_4r5tf"]
+[ext_resource type="Script" uid="uid://dqqryne24xs10" path="res://scenes/transition.gd" id="1_f0i4t"]
+[ext_resource type="Texture2D" uid="uid://gkoa16u0ehbw" path="res://sprites/Arrow.png" id="2_px735"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ap01"]
 size = Vector2(186, 216)
 
 [node name="Transition" type="Area2D"]
-script = ExtResource("1_pj2mc")
+script = ExtResource("1_f0i4t")
 metadata/InteractSignal = true
 metadata/Enabled = true
 
@@ -19,7 +19,7 @@ metadata/PlayerInside = false
 visible = false
 position = Vector2(0, -100)
 scale = Vector2(2, 2)
-texture = ExtResource("2_4r5tf")
+texture = ExtResource("2_px735")
 
 [node name="teleport_location" type="Marker2D" parent="."]
 

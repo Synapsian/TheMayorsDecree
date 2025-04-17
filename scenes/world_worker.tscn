@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dy5cgr3ujiuuc" path="res://tiles/dirt.png" id="8_upaqt"]
 [ext_resource type="Texture2D" uid="uid://38qmkmfx20bm" path="res://tiles/door-pixilart.png" id="9_hn8qf"]
 [ext_resource type="Texture2D" uid="uid://dtn77wmadmipi" path="res://tiles/THRONE.png" id="10_f6afu"]
-[ext_resource type="PackedScene" uid="uid://n0rgydpdohbv" path="res://worker.tscn" id="11_hny7u"]
+[ext_resource type="PackedScene" uid="uid://n0rgydpdohbv" path="res://scenes/worker.tscn" id="11_hny7u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fwvsa"]
 texture = ExtResource("1_iblr0")
