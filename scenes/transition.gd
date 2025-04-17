@@ -2,6 +2,7 @@ extends Area2D
 
 # // Signals
 signal enable_transition(transition_name)
+signal transition_used()
 # \\ Signals
 
 # // Variables
@@ -9,11 +10,14 @@ var interaction_debounce = false
 # \\ Variables
 
 # // Tasks
+func complete_third_task():
+	Tasks.complete_task("mayor_exit_building")
+
 func complete_second_task():
 	Tasks.hide()
 	Decree.new_decree()
 	enable_transition.emit("Transition2")
-	Tasks.add_task("mayor_exit_building","Exit the building",Vector2(0,0))
+	Tasks.add_task("mayor_exit_building","Exit the building",Vector2(-1087.0,-3322.0))
 
 func complete_first_task():
 	Tasks.add_task("mayor_sit_down","Take your seat",Vector2(1568.0,-2690.0),complete_second_task)
@@ -45,6 +49,7 @@ func _process(_delta: float) -> void:
 
 		# Calls all objects with the group "Player", then calls the "transition_set_position" function.
 		get_tree().call_group("Player","transition_set_position",$teleport_location.global_position)
+		transition_used.emit()
 		
 		if get_meta("InteractSignal"):
 			Tasks.complete_task("mayor_first_transition")
