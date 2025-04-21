@@ -154,27 +154,28 @@ tile_map_data = PackedByteArray("AAAAAAQAAQAAAAAAAAD//wQAAQAAAAAAAAABAAQAAQAAAAA
 tile_set = SubResource("TileSet_2m72k")
 
 [node name="outside_parralax" type="ParallaxBackground" parent="."]
+scroll_ignore_camera_zoom = true
 
 [node name="Sky" type="ParallaxLayer" parent="outside_parralax"]
-motion_mirroring = Vector2(2000, 0)
+motion_mirroring = Vector2(3000, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="outside_parralax/Sky"]
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 texture = ExtResource("11_ib0vl")
 
 [node name="Layer2" type="ParallaxLayer" parent="outside_parralax"]
 motion_scale = Vector2(0.5, 0.5)
-motion_mirroring = Vector2(2000, 0)
+motion_mirroring = Vector2(3000, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="outside_parralax/Layer2"]
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 texture = ExtResource("12_l64x6")
 
 [node name="Layer1" type="ParallaxLayer" parent="outside_parralax"]
-motion_mirroring = Vector2(2000, 0)
+motion_mirroring = Vector2(3000, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="outside_parralax/Layer1"]
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 texture = ExtResource("13_wepko")
 
 [node name="NPC" parent="." instance=ExtResource("14_y2xma")]
@@ -193,6 +194,9 @@ color = Color(0, 0, 0, 1)
 
 [node name="Transition" parent="." instance=ExtResource("14_wd708")]
 position = Vector2(1287, 639)
+metadata/QuestPosition = Vector2(1283, 658)
+metadata/QuestName = "mayor_first_transition"
+metadata/QuestObjective = "Enter the building"
 
 [node name="Hitbox" parent="Transition" index="0"]
 position = Vector2(8, -20)
@@ -211,9 +215,8 @@ metadata/PlayerInside = false
 
 [node name="Transition2" parent="." instance=ExtResource("14_wd708")]
 position = Vector2(202, -2686)
-metadata/InteractSignal = false
 metadata/Enabled = false
-metadata/Position = Vector2(1287, 639)
+metadata/QuestName = "mayor_exit_building"
 
 [node name="teleport_location" parent="Transition2" index="2"]
 position = Vector2(1087, 3325)
@@ -223,7 +226,6 @@ z_index = -1
 position = Vector2(1295, 396)
 texture = ExtResource("18_7lr2g")
 
-[connection signal="enable_transition" from="Transition" to="Transition2" method="_on_enable_transition"]
 [connection signal="body_entered" from="chair" to="chair" method="_on_body_entered"]
 [connection signal="body_exited" from="chair" to="chair" method="_on_body_exited"]
 [connection signal="throne_used" from="chair" to="Transition" method="_on_chair_throne_used"]

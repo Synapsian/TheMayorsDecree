@@ -1,7 +1,7 @@
 extends Area2D
 
 # // Signals
-signal enable_transition(transition_name)
+#signal enable_transition(transition_name)
 signal transition_used()
 # \\ Signals
 
@@ -10,22 +10,22 @@ var interaction_debounce = false
 # \\ Variables
 
 # // Tasks
-func complete_third_task():
-	Tasks.complete_task("mayor_exit_building")
+#func complete_third_task():
+	#Tasks.complete_task("mayor_exit_building")
 
-func complete_second_task():
-	Tasks.hide()
-	Decree.new_decree()
-	enable_transition.emit("Transition2")
-	Tasks.add_task("mayor_exit_building","Exit the building",Vector2(-1087.0,-3322.0))
-
-func complete_first_task():
-	Tasks.add_task("mayor_sit_down","Take your seat",Vector2(1568.0,-2690.0),complete_second_task)
+#func complete_second_task():
+	#Tasks.hide()
+	#Decree.new_decree()
+	#enable_transition.emit("Transition2")
+	#Tasks.add_task("mayor_exit_building","Exit the building",Vector2(-1087.0,-3322.0))
 # \\ Tasks
 
 func _ready() -> void:
-	if get_meta("InteractSignal") == true:
-		Tasks.add_task("mayor_first_transition","Enter city hall",Vector2(1283.0,658.0),complete_first_task)
+	if get_meta("QuestName") == "mayor_first_transition":
+		var QuestName = get_meta("QuestName")
+		var QuestObjective = get_meta("QuestObjective")
+		var QuestPosition = get_meta("QuestPosition")
+		Tasks.add_task(QuestName,QuestObjective,QuestPosition)
 		# Complete when first transition is used
 
 func _process(_delta: float) -> void:
@@ -52,7 +52,7 @@ func _process(_delta: float) -> void:
 		transition_used.emit()
 		
 		if get_meta("InteractSignal"):
-			Tasks.complete_task("mayor_first_transition")
+			Tasks.complete_task(get_meta("QuestName"))
 		
 		# // Creates a new timer, awaits it, and then gets rid of it/
 		var newtimer = Timer.new()
@@ -96,6 +96,6 @@ func _on_body_exited(body: Node2D) -> void:
 	tween.tween_property($Arrow,"modulate:a",0,0.5)
 	# \\ Arrow Animation
 
-func _on_enable_transition(transition_name: Variant) -> void:
+func enable_transition(transition_name: Variant) -> void:
 	if name == transition_name:
 		set_meta("Enabled",true)

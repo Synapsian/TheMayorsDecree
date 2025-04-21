@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://n0rgydpdohbv"]
 
-[ext_resource type="Script" uid="uid://l20a2udjtafb" path="res://worker.gd" id="1_8vnpx"]
+[ext_resource type="Script" uid="uid://l20a2udjtafb" path="res://scenes/worker.gd" id="1_8vnpx"]
 [ext_resource type="Texture2D" uid="uid://bq30e86j3fsxw" path="res://sprites/player/peasant-idle.png" id="1_26yh5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8vnpx"]

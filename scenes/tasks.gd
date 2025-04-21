@@ -40,6 +40,11 @@ func complete_task(task_name):
 	on_complete_functions.erase(task_name) # Gets rid of task_name in dict
 	on_complete.call()
 	
+	if task_name == "mayor_first_transition":
+		add_task("mayor_sit_down","Take your seat",Vector2(1568.0,-2690.0),complete_second_task)
+	if task_name == "mayor_exit_building":
+		complete_third_task()
+	
 	if not labels[task_name]: return	
 	var label = labels[task_name]
 	label.queue_free()
@@ -56,3 +61,25 @@ func get_target_location():
 	if top_task.has_meta("target_location"):
 		return top_task.get_meta("target_location")
 	return false
+
+#func _ready() -> void:
+	#complete_third_task()
+
+# // Tasks
+func complete_third_task():
+	print("Third task completed")
+	
+	# Works, however main scene has to be unloaded first.
+	#var packedScene = load("res://scenes/world_worker.tscn")
+	#var sceneInstance = packedScene.instantiate()
+	#get_tree().get_root().add_child.call_deferred(sceneInstance)
+	
+	#complete_task("mayor_exit_building")
+
+func complete_second_task():
+	hide()
+	Decree.new_decree()
+	get_tree().call_group("Transition","enable_transition","Transition2")
+	#enable_transition.emit("Transition2")
+	add_task("mayor_exit_building","Exit the building",Vector2(-1087.0,-3322.0))
+# \\ Tasks
