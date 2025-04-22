@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://gkoa16u0ehbw" path="res://sprites/Arrow.png" id="2_px735"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ap01"]
-size = Vector2(186, 216)
+size = Vector2(131, 255)
 
 [node name="Transition" type="Area2D" groups=["Transition"]]
 script = ExtResource("1_f0i4t")

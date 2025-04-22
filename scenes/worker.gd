@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-func _on_transition_set_position(new_position: Vector2) -> void:
+func transition_set_position(new_position: Vector2) -> void:
 	TransitionScreen.transition()
 	await TransitionScreen.on_transition_finished
 	position = new_position

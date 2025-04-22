@@ -65,6 +65,35 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vnpx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7p3b1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mf4wl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crjqa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4r8qu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ae715")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tjw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5ikv")
+}],
+"loop": true,
+"name": &"run",
+"speed": 20.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1h0i1"]
@@ -72,15 +101,16 @@ size = Vector2(52, 66)
 
 [node name="worker" type="CharacterBody2D"]
 script = ExtResource("1_8vnpx")
+metadata/transition_debounce = false
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_m1ch4")
-animation = &"idle"
-frame = 7
-frame_progress = 0.134328
+animation = &"run"
+frame_progress = 0.969205
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_1h0i1")
 
 [node name="camera" type="Camera2D" parent="."]
+zoom = Vector2(0.75, 0.75)
