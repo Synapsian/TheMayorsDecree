@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://d3e8chpn8ij4n"]
+[gd_scene load_steps=48 format=4 uid="uid://d3e8chpn8ij4n"]
 
 [ext_resource type="Texture2D" uid="uid://bjme7yxj85j1w" path="res://tiles/brick.png" id="1_iblr0"]
 [ext_resource type="Texture2D" uid="uid://crn0k306qo2wn" path="res://tiles/grass.png" id="2_hny7u"]
@@ -12,6 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://dtn77wmadmipi" path="res://tiles/THRONE.png" id="10_f6afu"]
 [ext_resource type="PackedScene" uid="uid://n0rgydpdohbv" path="res://scenes/worker.tscn" id="11_hny7u"]
 [ext_resource type="PackedScene" uid="uid://o0plor4y2d4j" path="res://scenes/transition.tscn" id="12_11pq3"]
+[ext_resource type="Texture2D" uid="uid://c113ibmidpddi" path="res://sprites/buildings/house.png" id="13_hha26"]
+[ext_resource type="Script" uid="uid://6hbjp4tb8nc1" path="res://scenes/animated_objects.gd" id="13_x22eu"]
+[ext_resource type="Texture2D" uid="uid://0ty0xoia8v3l" path="res://sprites/npcs/COPYRIGHT_sheet.png" id="14_rvt0n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fwvsa"]
 texture = ExtResource("1_iblr0")
@@ -130,6 +133,155 @@ sources/7 = SubResource("TileSetAtlasSource_l5ya4")
 sources/8 = SubResource("TileSetAtlasSource_whnhw")
 sources/10 = SubResource("TileSetAtlasSource_5cy4j")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ma7k"]
+atlas = ExtResource("14_rvt0n")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpbch"]
+atlas = ExtResource("14_rvt0n")
+region = Rect2(96, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6x4q"]
+atlas = ExtResource("14_rvt0n")
+region = Rect2(192, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfqia"]
+atlas = ExtResource("14_rvt0n")
+region = Rect2(288, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8muow"]
+atlas = ExtResource("14_rvt0n")
+region = Rect2(384, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usa4x"]
+atlas = ExtResource("14_rvt0n")
+region = Rect2(480, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14fsj"]
+atlas = ExtResource("14_rvt0n")
+region = Rect2(576, 0, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1nolc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ma7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpbch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6x4q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfqia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8muow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usa4x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14fsj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvt0n"]
+atlas = ExtResource("13_hha26")
+region = Rect2(0, 0, 703, 670)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x22eu"]
+atlas = ExtResource("13_hha26")
+region = Rect2(703, 0, 703, 670)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3j12"]
+atlas = ExtResource("13_hha26")
+region = Rect2(1406, 0, 703, 670)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mu4dy"]
+atlas = ExtResource("13_hha26")
+region = Rect2(2109, 0, 703, 670)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnnu6"]
+atlas = ExtResource("13_hha26")
+region = Rect2(2812, 0, 703, 670)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aj4rn"]
+atlas = ExtResource("13_hha26")
+region = Rect2(3515, 0, 703, 670)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pbpy"]
+atlas = ExtResource("13_hha26")
+region = Rect2(4218, 0, 703, 670)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r86uo"]
+atlas = ExtResource("13_hha26")
+region = Rect2(4921, 0, 703, 670)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0y5px"]
+atlas = ExtResource("13_hha26")
+region = Rect2(5624, 0, 703, 670)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcfgb"]
+atlas = ExtResource("13_hha26")
+region = Rect2(6327, 0, 703, 670)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xysh3"]
+atlas = ExtResource("13_hha26")
+region = Rect2(7030, 0, 703, 670)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nk1ps"]
+atlas = ExtResource("13_hha26")
+region = Rect2(7733, 0, 703, 670)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ma7k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvt0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x22eu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3j12")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mu4dy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnnu6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aj4rn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1pbpy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r86uo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0y5px")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcfgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xysh3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nk1ps")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="world_worker" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -149,6 +301,34 @@ metadata/InteractSignal = false
 position = Vector2(-1.5, -18.5)
 
 [node name="teleport_location" parent="Transition" index="2"]
-position = Vector2(-393, -1636)
+position = Vector2(-321, -1694)
+
+[node name="animated_objects" type="Node2D" parent="."]
+script = ExtResource("13_x22eu")
+
+[node name="him" type="AnimatedSprite2D" parent="animated_objects"]
+position = Vector2(126, -1132)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_1nolc")
+
+[node name="House4" type="AnimatedSprite2D" parent="animated_objects"]
+position = Vector2(1456, -1368)
+sprite_frames = SubResource("SpriteFrames_7ma7k")
+frame_progress = 0.57277
+
+[node name="House3" type="AnimatedSprite2D" parent="animated_objects"]
+position = Vector2(-192, -1368)
+sprite_frames = SubResource("SpriteFrames_7ma7k")
+frame_progress = 0.57277
+
+[node name="House2" type="AnimatedSprite2D" parent="animated_objects"]
+position = Vector2(-968, -1368)
+sprite_frames = SubResource("SpriteFrames_7ma7k")
+frame_progress = 0.57277
+
+[node name="House" type="AnimatedSprite2D" parent="animated_objects"]
+position = Vector2(2286, -1369)
+sprite_frames = SubResource("SpriteFrames_7ma7k")
+frame_progress = 0.57277
 
 [editable path="Transition"]

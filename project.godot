@@ -20,6 +20,7 @@ TransitionScreen="*res://scenes/transition_screen.tscn"
 Dialogue="*res://scenes/dialogue.tscn"
 Tasks="*res://scenes/tasks.tscn"
 Decree="*res://scenes/decree.tscn"
+MoneyHandler="*res://scenes/money_handler.tscn"
 
 [global_group]
 
