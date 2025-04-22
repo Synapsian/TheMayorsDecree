@@ -20,7 +20,7 @@ func default_function():
 var on_complete_functions = {}
 var labels = {}
 
-func add_task(task_name: String,text_contents: String, quest_location: Vector2, on_complete = default_function, args = null):
+func add_task(task_name: String,text_contents: String, quest_location: Vector2, on_complete = default_function):
 	var new_label = _create_new_label(text_contents)
 	new_label.set_meta("target_location",quest_location)
 	
@@ -68,8 +68,9 @@ func get_target_location():
 # // Tasks
 func complete_third_task():
 	print("Third task completed")
-	
+	get_tree().call_group("Start Screen","_load_world_worker")
 	# Works, however main scene has to be unloaded first.
+	
 	#var packedScene = load("res://scenes/world_worker.tscn")
 	#var sceneInstance = packedScene.instantiate()
 	#get_tree().get_root().add_child.call_deferred(sceneInstance)

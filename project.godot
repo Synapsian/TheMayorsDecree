@@ -25,6 +25,7 @@ Decree="*res://scenes/decree.tscn"
 
 Player="Worker/Mayor Character"
 Transition="All transitions"
+"Start Screen"=""
 
 [input]
 
