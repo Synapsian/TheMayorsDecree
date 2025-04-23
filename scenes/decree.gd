@@ -15,8 +15,12 @@ func _give_effects(buff_index:int,to_free:Array):
 	print("Give effects, index: " + str(buff_index))
 	if buff_index == 0:
 		# +20% taxes
-		print("Increasing player income by 20%")
-		increase_player_income.emit("Percent",20.0)
+		print("Increasing mayor income by 20%")
+		MoneyHandler.increase_mayor_income("Percent",20.0,true)
+		#increase_player_income.emit("Percent",20.0)
+		print("Decreasing worker income by 20%")
+		MoneyHandler.increase_worker_income("Percent",20.0,false)
+		
 	_remove_decree(to_free)
 
 func _remove_decree(to_free:Array):

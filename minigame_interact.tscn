@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dq4qu7qn6qdva"]
+
+[ext_resource type="Script" uid="uid://h6602vtjla5k" path="res://minigame_interact.gd" id="1_7xxgy"]
+[ext_resource type="Texture2D" uid="uid://gkoa16u0ehbw" path="res://sprites/Arrow.png" id="1_cdne8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xxgy"]
+size = Vector2(131, 255)
+
+[node name="minigame_interact" type="Area2D"]
+script = ExtResource("1_7xxgy")
+metadata/Enabled = true
+metadata/minigame_name = "cooking"
+
+[node name="Arrow" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -100)
+scale = Vector2(2, 2)
+texture = ExtResource("1_cdne8")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7xxgy")
+metadata/PlayerInside = false
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
