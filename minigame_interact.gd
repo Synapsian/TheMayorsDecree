@@ -38,7 +38,7 @@ func _process(_delta: float) -> void:
 		# Ended if player character not found
 
 		# Call function here
-		
+		_on_interaction()
 		# // Creates a new timer, awaits it, and then gets rid of it/
 		var newtimer = Timer.new()
 		newtimer.wait_time = 3

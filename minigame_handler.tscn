@@ -1,6 +1,79 @@
-[gd_scene load_steps=2 format=3 uid="uid://b087m2d2tfhaj"]
+[gd_scene load_steps=6 format=3 uid="uid://b087m2d2tfhaj"]
 
 [ext_resource type="Script" uid="uid://dpgq3u5gbeyyh" path="res://minigame_handler.gd" id="1_kp0wp"]
+[ext_resource type="Texture2D" uid="uid://cbqi4tn7o6278" path="res://sprites/cooking_fire.png" id="2_8p8bq"]
+[ext_resource type="Script" uid="uid://dy1g2736ej0ck" path="res://cooking_minigame.gd" id="2_rpyik"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rpyik"]
+size = Vector2(300, 39.5)
+
+[sub_resource type="Curve2D" id="Curve2D_rpyik"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 440, 190, 0, 0, 0, 0, 700, 190)
+}
+point_count = 2
 
 [node name="minigame_handler" type="Node2D"]
 script = ExtResource("1_kp0wp")
+
+[node name="cooking_minigame" type="CanvasLayer" parent="."]
+script = ExtResource("2_rpyik")
+
+[node name="background" type="ColorRect" parent="cooking_minigame"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.190762, 0.190762, 0.190762, 1)
+
+[node name="outline" type="ColorRect" parent="cooking_minigame"]
+z_index = -1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = -152.0
+offset_right = 152.0
+offset_bottom = 152.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="fire" type="Sprite2D" parent="cooking_minigame"]
+position = Vector2(576, 424)
+texture = ExtResource("2_8p8bq")
+
+[node name="hitbox" type="Area2D" parent="cooking_minigame/fire"]
+position = Vector2(-576, -424)
+
+[node name="collision_shape" type="CollisionShape2D" parent="cooking_minigame/fire/hitbox"]
+position = Vector2(576, 454.75)
+shape = SubResource("RectangleShape2D_rpyik")
+
+[node name="pan" type="ColorRect" parent="cooking_minigame"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="spawn_path" type="Path2D" parent="cooking_minigame"]
+curve = SubResource("Curve2D_rpyik")
+
+[node name="spawn_location" type="PathFollow2D" parent="cooking_minigame/spawn_path"]
+position = Vector2(440, 190)

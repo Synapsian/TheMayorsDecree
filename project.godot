@@ -21,7 +21,7 @@ Dialogue="*res://scenes/dialogue.tscn"
 Tasks="*res://scenes/tasks.tscn"
 Decree="*res://scenes/decree.tscn"
 MoneyHandler="*res://scenes/money_handler.tscn"
-MinigameHandler="*res://minigame_handler.gd"
+MinigameHandler="*res://minigame_handler.tscn"
 
 [global_group]
 
