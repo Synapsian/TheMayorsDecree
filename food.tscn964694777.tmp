@@ -5,9 +5,10 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pohk7"]
 
-[node name="food" type="CharacterBody2D"]
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+constant_linear_velocity = Vector2(0, -10)
+sync_to_physics = false
 script = ExtResource("1_pohk7")
-metadata/no_gravity = false
 
 [node name="sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
