@@ -9,5 +9,6 @@ func _process(delta: float) -> void:
 		move_and_slide()
 	else:
 		if velocity.y > 0:
-			velocity = -velocity
+			var old_velocity = velocity
+			velocity = Vector2(old_velocity.x,-old_velocity.y)
 		move_and_slide()

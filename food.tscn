@@ -6,6 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pohk7"]
 
 [node name="food" type="CharacterBody2D"]
+collision_layer = 8
+collision_mask = 0
 script = ExtResource("1_pohk7")
 metadata/no_gravity = false
 metadata/flip_times = 0

@@ -1,20 +1,41 @@
-[gd_scene load_steps=7 format=3 uid="uid://b087m2d2tfhaj"]
+[gd_scene load_steps=10 format=3 uid="uid://b087m2d2tfhaj"]
 
 [ext_resource type="Script" uid="uid://dpgq3u5gbeyyh" path="res://minigame_handler.gd" id="1_kp0wp"]
 [ext_resource type="Texture2D" uid="uid://cbqi4tn7o6278" path="res://sprites/cooking_fire.png" id="2_8p8bq"]
 [ext_resource type="Script" uid="uid://dy1g2736ej0ck" path="res://cooking_minigame.gd" id="2_rpyik"]
+[ext_resource type="Texture2D" uid="uid://ra1n6thn0det" path="res://sprites/pan.png" id="4_rbnn2"]
+[ext_resource type="Texture2D" uid="uid://b33u5j54j2g8j" path="res://sprites/panflip.png" id="5_q3kqe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpyik"]
 size = Vector2(300, 39.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uliym"]
-size = Vector2(50, 50)
 
 [sub_resource type="Curve2D" id="Curve2D_rpyik"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 440, 190, 0, 0, 0, 0, 700, 190)
 }
 point_count = 2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3o65x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rbnn2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_q3kqe")
+}],
+"loop": true,
+"name": &"flip",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rbnn2"]
+size = Vector2(60, 47)
 
 [node name="minigame_handler" type="Node2D"]
 script = ExtResource("1_kp0wp")
@@ -34,7 +55,7 @@ offset_right = 150.0
 offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.190762, 0.190762, 0.190762, 1)
+color = Color(0.40438, 0.624882, 0.784457, 1)
 
 [node name="outline" type="ColorRect" parent="cooking_minigame"]
 z_index = -1
@@ -57,37 +78,32 @@ texture = ExtResource("2_8p8bq")
 
 [node name="hitbox" type="Area2D" parent="cooking_minigame/fire"]
 position = Vector2(-576, -424)
-collision_layer = 8
+collision_layer = 0
+collision_mask = 8
 
 [node name="collision_shape" type="CollisionShape2D" parent="cooking_minigame/fire/hitbox"]
 position = Vector2(576, 454.75)
 shape = SubResource("RectangleShape2D_rpyik")
-
-[node name="pan" type="ColorRect" parent="cooking_minigame"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -25.0
-offset_top = 48.0
-offset_right = 25.0
-offset_bottom = 98.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.462291, 0.462291, 0.462291, 1)
-
-[node name="hitbox" type="Area2D" parent="cooking_minigame/pan"]
-
-[node name="collision_shape" type="CollisionShape2D" parent="cooking_minigame/pan/hitbox"]
-position = Vector2(25, 25)
-shape = SubResource("RectangleShape2D_uliym")
 
 [node name="spawn_path" type="Path2D" parent="cooking_minigame"]
 curve = SubResource("Curve2D_rpyik")
 
 [node name="spawn_location" type="PathFollow2D" parent="cooking_minigame/spawn_path"]
 position = Vector2(440, 190)
+
+[node name="pan" type="AnimatedSprite2D" parent="cooking_minigame"]
+position = Vector2(574, 406)
+sprite_frames = SubResource("SpriteFrames_3o65x")
+metadata/_edit_group_ = true
+
+[node name="hitbox" type="Area2D" parent="cooking_minigame/pan"]
+position = Vector2(-8, 6)
+collision_layer = 0
+collision_mask = 8
+
+[node name="collision_shape" type="CollisionShape2D" parent="cooking_minigame/pan/hitbox"]
+position = Vector2(8, -11.5)
+shape = SubResource("RectangleShape2D_rbnn2")
 
 [connection signal="area_entered" from="cooking_minigame/fire/hitbox" to="cooking_minigame" method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="cooking_minigame/fire/hitbox" to="cooking_minigame" method="_on_hitbox_body_entered"]
