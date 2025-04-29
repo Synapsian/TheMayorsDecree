@@ -8,6 +8,7 @@
 [node name="food" type="CharacterBody2D"]
 script = ExtResource("1_pohk7")
 metadata/no_gravity = false
+metadata/flip_times = 0
 
 [node name="sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)

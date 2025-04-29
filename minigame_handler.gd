@@ -14,6 +14,6 @@ func new_minigame(minigame_name:String):
 	print("Playing new minigame " + minigame_name)
 	minigames[minigame_name].call()
 
-func _ready() -> void:
-	print("Parent is " + get_parent().name)
-	new_minigame("cooking")
+#func _ready() -> void:
+	#print("Parent is " + get_parent().name)
+	#new_minigame("cooking")
