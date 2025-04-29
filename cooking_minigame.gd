@@ -39,6 +39,7 @@ func start():
 	
 func _end_minigame():
 	print("Ending cooking minigame")
+	print("Total Points: " + str(points))
 	MINIGAME_ENABLED = false
 	visible = false
 	
@@ -122,4 +123,4 @@ func _on_hitbox_body_entered(body: Node2D) -> void:
 	all_food.pop_back()
 	body.queue_free()
 	points -= 1
-	print("-1 Point")
+	clamp(points,0,99)
