@@ -79,7 +79,7 @@ func complete_third_task():
 
 func complete_second_task():
 	hide()
-	Decree.new_decree()
+	Decree.new_decree(4)
 	get_tree().call_group("Transition","enable_transition","Transition2")
 	#enable_transition.emit("Transition2")
 	add_task("mayor_exit_building","Exit the building",Vector2(-1087.0,-3322.0))

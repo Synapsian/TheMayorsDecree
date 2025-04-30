@@ -40,6 +40,12 @@ func start():
 func _end_minigame():
 	print("Ending cooking minigame")
 	print("Total Points: " + str(points))
+	
+	var wage = MoneyHandler.get_wage()
+	var moneyToEarn = wage * points
+	moneyToEarn = moneyToEarn / 10
+	
+	MoneyHandler.increase_income("Worker",moneyToEarn,"Add")
 	MINIGAME_ENABLED = false
 	visible = false
 	

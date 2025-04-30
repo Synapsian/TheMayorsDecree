@@ -5,8 +5,16 @@ signal increase_player_income(type:String, value:float)
 signal on_decree_finished()
 @onready var list = $container/list
 @onready var tasks = Tasks
-var buffs = ["You will gain +20% money at the end of the day","End Hunger"]
-var debuffs = ["People will be unhappy at the raise in taxes","Lose 5 dollars every paycheck"]
+var amountOfDecrees = 1
+var buffs = [
+"You gain increased money at the end of the day",
+"Your taxes are decreased by -10%",
+]
+
+var debuffs = [
+"The money is taken out of worker's wage",
+"Worker taxes have to be increased by +10%",
+]
 
 func _ready() -> void:
 	visible = false
@@ -14,24 +22,31 @@ func _ready() -> void:
 func _give_effects(buff_index:int,to_free:Array):
 	print("Give effects, index: " + str(buff_index))
 	if buff_index == 0:
-		# +20% taxes
-		print("Increasing mayor income by 20%")
-		MoneyHandler.increase_mayor_income("Percent",20.0,true)
-		#increase_player_income.emit("Percent",20.0)
-		print("Decreasing worker income by 20%")
-		MoneyHandler.increase_worker_income("Percent",20.0,false)
+		print("Decreasing worker wage")
+		MoneyHandler.change_wage(-5)
+
+	elif buff_index == 1:
+		print("Lowering Mayor taxes by 10")
+		MoneyHandler.increase_taxes(-10,"Mayor")
+		print("Increasing Worker taxes by 10")
+		MoneyHandler.increase_taxes(10,"Worker")
 		
 	_remove_decree(to_free)
 
 func _remove_decree(to_free:Array):
 	for item in to_free:
 		item.queue_free()
-	visible = false
-	tasks.show()
-	on_decree_finished.emit()
-	#new_decree()
+	
+	if amountOfDecrees <= 1:	
+		visible = false
+		tasks.show()
+		on_decree_finished.emit()
+		#new_decree()
+	else:
+		new_decree(amountOfDecrees - 1)
 
-func new_decree():
+func new_decree(amount:int):
+	amountOfDecrees = amount
 	visible = true
 	tasks.hide()
 	
