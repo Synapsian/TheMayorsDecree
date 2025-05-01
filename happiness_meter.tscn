@@ -1,0 +1,76 @@
+[gd_scene load_steps=10 format=3 uid="uid://dvf6jkiqynjjm"]
+
+[ext_resource type="Script" uid="uid://ryggrna0rash" path="res://happiness_meter.gd" id="1_g7nm0"]
+[ext_resource type="Texture2D" uid="uid://duwjm8b18guwv" path="res://sprites/happiness_bar.png" id="1_ka4qx"]
+[ext_resource type="Texture2D" uid="uid://b0lc16tptfcrp" path="res://sprites/happiness_face_5.png" id="2_yuqj8"]
+[ext_resource type="Texture2D" uid="uid://bmswmmuj8384n" path="res://sprites/happiness_face_2.png" id="3_g7nm0"]
+[ext_resource type="Texture2D" uid="uid://c8opv2gykivdy" path="res://sprites/happiness_face_3.png" id="4_fihpg"]
+[ext_resource type="Texture2D" uid="uid://d7s0rx1dy1xr" path="res://sprites/happiness_face_1.png" id="5_cbd1d"]
+[ext_resource type="Texture2D" uid="uid://byatruwovvlg8" path="res://sprites/happiness_face_4.png" id="6_tt6p2"]
+
+[sub_resource type="Curve2D" id="Curve2D_yuqj8"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 480, 24, 0, 0, 0, 0, 672, 24)
+}
+point_count = 2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bienv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yuqj8")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_g7nm0")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_fihpg")
+}],
+"loop": true,
+"name": &"neutral",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_cbd1d")
+}],
+"loop": true,
+"name": &"super_happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_tt6p2")
+}],
+"loop": true,
+"name": &"unhappy",
+"speed": 5.0
+}]
+
+[node name="happiness_meter" type="CanvasLayer"]
+script = ExtResource("1_g7nm0")
+
+[node name="bar" type="Sprite2D" parent="."]
+position = Vector2(576, 24)
+texture = ExtResource("1_ka4qx")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_yuqj8")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(633.614, 24)
+progress = 153.6
+
+[node name="face" type="AnimatedSprite2D" parent="Path2D/PathFollow2D"]
+sprite_frames = SubResource("SpriteFrames_bienv")
+animation = &"angry"
