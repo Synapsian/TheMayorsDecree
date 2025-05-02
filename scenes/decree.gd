@@ -9,11 +9,13 @@ var amountOfDecrees = 1
 var buffs = [
 "You gain increased money at the end of the day",
 "Your taxes are decreased by -10%",
+"New factories are created, gaining more cash",
 ]
 
 var debuffs = [
 "The money is taken out of worker's wage",
 "Worker taxes have to be increased by +10%",
+"People are unhappy about this",
 ]
 
 func _ready() -> void:
@@ -31,6 +33,13 @@ func _give_effects(buff_index:int,to_free:Array):
 		print("Increasing Worker taxes by 10")
 		MoneyHandler.increase_taxes(10,"Worker")
 		
+	elif buff_index == 2:
+		print("Increasing mayor money gain")
+		MoneyHandler.increase_income("Mayor",100.0,"Add")
+		print("Lowering happiness")
+		var current_happpiness = HappinessMeter.get_happiness()
+		HappinessMeter.set_happiness(current_happpiness - 20)
+		
 	_remove_decree(to_free)
 
 func _remove_decree(to_free:Array):
@@ -38,6 +47,7 @@ func _remove_decree(to_free:Array):
 		item.queue_free()
 	
 	if amountOfDecrees <= 1:	
+		HappinessMeter.hide()
 		visible = false
 		tasks.show()
 		on_decree_finished.emit()
@@ -47,6 +57,7 @@ func _remove_decree(to_free:Array):
 
 func new_decree(amount:int):
 	amountOfDecrees = amount
+	HappinessMeter.visible = true
 	visible = true
 	tasks.hide()
 	

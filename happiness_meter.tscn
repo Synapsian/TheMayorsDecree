@@ -61,15 +61,17 @@ animations = [{
 script = ExtResource("1_g7nm0")
 
 [node name="bar" type="Sprite2D" parent="."]
-position = Vector2(576, 24)
+position = Vector2(120, 621)
 texture = ExtResource("1_ka4qx")
+metadata/_edit_group_ = true
 
 [node name="Path2D" type="Path2D" parent="."]
+position = Vector2(-456, 597)
 curve = SubResource("Curve2D_yuqj8")
+metadata/_edit_group_ = true
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(633.614, 24)
-progress = 153.6
+position = Vector2(480, 24)
 
 [node name="face" type="AnimatedSprite2D" parent="Path2D/PathFollow2D"]
 sprite_frames = SubResource("SpriteFrames_bienv")
