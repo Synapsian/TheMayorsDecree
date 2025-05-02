@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://i8dal4ctfurm"]
+
+[ext_resource type="Texture2D" uid="uid://cuhoffs5a7c1q" path="res://sprites/gui/gold_progress_bar_background.png" id="1_3qwyy"]
+[ext_resource type="Texture2D" uid="uid://da3lv2egt35yr" path="res://sprites/gui/gold_progress_bar_frontground.png" id="2_yba2u"]
+[ext_resource type="Texture2D" uid="uid://cf0i7oc1kxrq5" path="res://sprites/gui/gold_progress_bar_outline.png" id="3_dtbd5"]
+
+[node name="gold_meter" type="CanvasLayer"]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = 16.0
+offset_top = 408.0
+offset_right = 56.0
+offset_bottom = 608.0
+value = 20.0
+fill_mode = 3
+texture_under = ExtResource("1_3qwyy")
+texture_over = ExtResource("3_dtbd5")
+texture_progress = ExtResource("2_yba2u")
+tint_progress = Color(0.985069, 0.78827, 0.0330431, 1)
