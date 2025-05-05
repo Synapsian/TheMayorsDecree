@@ -1,8 +1,9 @@
 extends Node2D
 
-var MayorMoney = {"Amount":1000,'Income':100,'Taxes':10}
-var WorkerMoney = {"Amount":100,'Income':10,'Taxes':10}
-var WorkerWage = 15
+var MayorMoney = {"Amount":1000.0,'Income':100.0,'Taxes':10.0}
+var WorkerMoney = {"Amount":100.0,'Income':10.0,'Taxes':10.0}
+var WorkerWage = 15.0
+var MaxGold = 5000.0
 
 func end_of_day_income():
 	var worker_taxes = WorkerMoney['Taxes']
@@ -20,6 +21,18 @@ func end_of_day_income():
 func get_wage():
 	return WorkerWage
 
+func get_dict(type:String):
+	if type == "Mayor":
+		return MayorMoney
+	elif type == "Worker":
+		return WorkerMoney
+	else:
+		push_error("No dict of type " + type + " found in get_dict. Error from line 24, money_handler.gd")
+		return false
+
+func get_max_gold():
+	return MaxGold
+
 func change_wage(amount:float):
 	WorkerWage += amount
 	WorkerWage = clampf(WorkerWage,1,100)
@@ -33,6 +46,9 @@ func increase_income(playerType:String,amount:float,increaseType:String):
 	if increaseType == 'Add':
 		playerDict['Income'] = playerDict['Income'] + amount
 		print("Changed income to " + str(playerDict['Income']))
+		if playerType == "Mayor":
+			print("Updated gold")
+			GoldMeter.update_gold(playerDict['Income'] + playerDict['Amount'])
 	else:
 		push_error("Incorrect increaseType given in increase_income in money_handler.gd")
 

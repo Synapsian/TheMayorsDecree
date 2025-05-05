@@ -48,6 +48,7 @@ func _remove_decree(to_free:Array):
 	
 	if amountOfDecrees <= 1:	
 		HappinessMeter.hide()
+		GoldMeter.hide()
 		visible = false
 		tasks.show()
 		on_decree_finished.emit()
@@ -58,6 +59,7 @@ func _remove_decree(to_free:Array):
 func new_decree(amount:int):
 	amountOfDecrees = amount
 	HappinessMeter.visible = true
+	GoldMeter.visible = true
 	visible = true
 	tasks.hide()
 	

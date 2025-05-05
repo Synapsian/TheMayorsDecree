@@ -1,19 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://i8dal4ctfurm"]
+[gd_scene load_steps=5 format=3 uid="uid://i8dal4ctfurm"]
 
 [ext_resource type="Texture2D" uid="uid://cuhoffs5a7c1q" path="res://sprites/gui/gold_progress_bar_background.png" id="1_3qwyy"]
+[ext_resource type="Script" uid="uid://cyihxjiur5cvv" path="res://gold_meter.gd" id="1_yba2u"]
 [ext_resource type="Texture2D" uid="uid://da3lv2egt35yr" path="res://sprites/gui/gold_progress_bar_frontground.png" id="2_yba2u"]
 [ext_resource type="Texture2D" uid="uid://cf0i7oc1kxrq5" path="res://sprites/gui/gold_progress_bar_outline.png" id="3_dtbd5"]
 
 [node name="gold_meter" type="CanvasLayer"]
+visible = false
+script = ExtResource("1_yba2u")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
-offset_left = 16.0
-offset_top = 408.0
-offset_right = 56.0
-offset_bottom = 608.0
-value = 20.0
+offset_left = 19.0
+offset_top = 397.0
+offset_right = 59.0
+offset_bottom = 597.0
+max_value = 1.0
+step = 0.01
 fill_mode = 3
 texture_under = ExtResource("1_3qwyy")
 texture_over = ExtResource("3_dtbd5")
 texture_progress = ExtResource("2_yba2u")
 tint_progress = Color(0.985069, 0.78827, 0.0330431, 1)
+metadata/_edit_group_ = true

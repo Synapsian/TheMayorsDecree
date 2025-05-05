@@ -23,6 +23,7 @@ Decree="*res://scenes/decree.tscn"
 MoneyHandler="*res://scenes/money_handler.tscn"
 MinigameHandler="*res://minigame_handler.tscn"
 HappinessMeter="*res://happiness_meter.tscn"
+GoldMeter="*res://gold_meter.tscn"
 
 [global_group]
 
