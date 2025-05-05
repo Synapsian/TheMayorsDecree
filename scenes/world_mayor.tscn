@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://bkeivelcqfgfo"]
+[gd_scene load_steps=47 format=4 uid="uid://bkeivelcqfgfo"]
 
 [ext_resource type="PackedScene" uid="uid://trnr05ftt3c8" path="res://scenes/mayor.tscn" id="1_g00bn"]
 [ext_resource type="Texture2D" uid="uid://bjme7yxj85j1w" path="res://tiles/brick.png" id="2_e2gc0"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://djcp2ijvy84vr" path="res://sprites/buildings/mayorhut.png" id="18_7lr2g"]
 [ext_resource type="Script" uid="uid://6hbjp4tb8nc1" path="res://scenes/animated_objects.gd" id="19_1m34u"]
 [ext_resource type="Texture2D" uid="uid://c113ibmidpddi" path="res://sprites/buildings/house.png" id="20_ritv1"]
+[ext_resource type="Texture2D" uid="uid://di65f7vbesmev" path="res://sprites/wild_hunt.png" id="21_ritv1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d0fr2"]
 texture = ExtResource("2_e2gc0")
@@ -342,6 +343,10 @@ sprite_frames = SubResource("SpriteFrames_3o1ic")
 z_index = -2
 position = Vector2(-1049, 429)
 sprite_frames = SubResource("SpriteFrames_3o1ic")
+
+[node name="heathcliff" type="Sprite2D" parent="." groups=["NPC"]]
+position = Vector2(1908, 671)
+texture = ExtResource("21_ritv1")
 
 [connection signal="body_entered" from="chair" to="chair" method="_on_body_entered"]
 [connection signal="body_exited" from="chair" to="chair" method="_on_body_exited"]
