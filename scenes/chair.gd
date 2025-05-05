@@ -1,7 +1,5 @@
 extends Area2D
 
-signal throne_used
-
 func _on_body_entered(body: Node2D) -> void:
 	if not body.name == "character": return
 	body.position = $hitbox.position

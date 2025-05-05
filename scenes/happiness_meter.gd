@@ -15,7 +15,7 @@ func get_happiness():
 func _ready() -> void:
 	hide()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if previous_happiness != happiness:
 		var new_tween = get_tree().create_tween()
 		var desired_value = clamp(happiness/max_happiness,0,1)
