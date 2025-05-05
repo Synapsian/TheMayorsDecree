@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c6tytykmnwod5"]
 
-[ext_resource type="Script" uid="uid://cvu4tgutpokcv" path="res://food.gd" id="1_pohk7"]
+[ext_resource type="Script" uid="uid://cvu4tgutpokcv" path="res://scenes/food.gd" id="1_pohk7"]
 [ext_resource type="Texture2D" uid="uid://ddl48aoebfyu4" path="res://sprites/mcporkchop.png" id="2_pohk7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pohk7"]

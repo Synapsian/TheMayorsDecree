@@ -21,9 +21,9 @@ Dialogue="*res://scenes/dialogue.tscn"
 Tasks="*res://scenes/tasks.tscn"
 Decree="*res://scenes/decree.tscn"
 MoneyHandler="*res://scenes/money_handler.tscn"
-MinigameHandler="*res://minigame_handler.tscn"
-HappinessMeter="*res://happiness_meter.tscn"
-GoldMeter="*res://gold_meter.tscn"
+MinigameHandler="*res://scenes/minigame_handler.tscn"
+HappinessMeter="*res://scenes/happiness_meter.tscn"
+GoldMeter="*res://scenes/gold_meter.tscn"
 
 [global_group]
 

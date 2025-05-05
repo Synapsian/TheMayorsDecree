@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://c113ibmidpddi" path="res://sprites/buildings/house.png" id="13_hha26"]
 [ext_resource type="Script" uid="uid://6hbjp4tb8nc1" path="res://scenes/animated_objects.gd" id="13_x22eu"]
 [ext_resource type="Texture2D" uid="uid://0ty0xoia8v3l" path="res://sprites/npcs/COPYRIGHT_sheet.png" id="14_rvt0n"]
-[ext_resource type="PackedScene" uid="uid://dq4qu7qn6qdva" path="res://minigame_interact.tscn" id="16_i3j12"]
+[ext_resource type="PackedScene" uid="uid://dq4qu7qn6qdva" path="res://scenes/minigame_interact.tscn" id="16_i3j12"]
 [ext_resource type="Texture2D" uid="uid://di1ayfmkw8l86" path="res://sprites/house2.png" id="17_mu4dy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fwvsa"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://i8dal4ctfurm"]
 
 [ext_resource type="Texture2D" uid="uid://cuhoffs5a7c1q" path="res://sprites/gui/gold_progress_bar_background.png" id="1_3qwyy"]
-[ext_resource type="Script" uid="uid://cyihxjiur5cvv" path="res://gold_meter.gd" id="1_yba2u"]
+[ext_resource type="Script" uid="uid://cyihxjiur5cvv" path="res://scenes/gold_meter.gd" id="1_yba2u"]
 [ext_resource type="Texture2D" uid="uid://da3lv2egt35yr" path="res://sprites/gui/gold_progress_bar_frontground.png" id="2_yba2u"]
 [ext_resource type="Texture2D" uid="uid://cf0i7oc1kxrq5" path="res://sprites/gui/gold_progress_bar_outline.png" id="3_dtbd5"]
 

@@ -2,7 +2,7 @@ extends CanvasLayer
 
 @onready var spawn_location = $spawn_path/spawn_location
 @onready var pan = $pan
-var food = preload("res://food.tscn")
+var food = preload("res://scenes/food.tscn")
 var click_debounce = false
 var points = 0
 var food_amount = 10

@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://b087m2d2tfhaj"]
 
-[ext_resource type="Script" uid="uid://dpgq3u5gbeyyh" path="res://minigame_handler.gd" id="1_kp0wp"]
+[ext_resource type="Script" uid="uid://dpgq3u5gbeyyh" path="res://scenes/minigame_handler.gd" id="1_kp0wp"]
 [ext_resource type="Texture2D" uid="uid://cbqi4tn7o6278" path="res://sprites/cooking_fire.png" id="2_8p8bq"]
-[ext_resource type="Script" uid="uid://dy1g2736ej0ck" path="res://cooking_minigame.gd" id="2_rpyik"]
+[ext_resource type="Script" uid="uid://dy1g2736ej0ck" path="res://scenes/cooking_minigame.gd" id="2_rpyik"]
 [ext_resource type="Texture2D" uid="uid://ra1n6thn0det" path="res://sprites/pan.png" id="4_rbnn2"]
 [ext_resource type="Texture2D" uid="uid://b33u5j54j2g8j" path="res://sprites/panflip.png" id="5_q3kqe"]
 

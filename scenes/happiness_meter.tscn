@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dvf6jkiqynjjm"]
 
-[ext_resource type="Script" uid="uid://ryggrna0rash" path="res://happiness_meter.gd" id="1_g7nm0"]
+[ext_resource type="Script" uid="uid://ryggrna0rash" path="res://scenes/happiness_meter.gd" id="1_g7nm0"]
 [ext_resource type="Texture2D" uid="uid://duwjm8b18guwv" path="res://sprites/happiness_bar.png" id="1_ka4qx"]
 [ext_resource type="Texture2D" uid="uid://b0lc16tptfcrp" path="res://sprites/happiness_face_5.png" id="2_yuqj8"]
 [ext_resource type="Texture2D" uid="uid://bmswmmuj8384n" path="res://sprites/happiness_face_2.png" id="3_g7nm0"]
