@@ -30,7 +30,6 @@ GoldMeter="*res://scenes/gold_meter.tscn"
 Player="Worker/Mayor Character"
 Transition="All transitions"
 "Start Screen"=""
-NPC=""
 
 [input]
 
