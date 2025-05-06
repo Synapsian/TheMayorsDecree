@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=2 format=3 uid="uid://bxngbacld11y3"]
+
+[ext_resource type="Script" uid="uid://btg4f3a2dx8rf" path="res://resources/npc_resource.gd" id="1_3gvta"]
+
+[resource]
+script = ExtResource("1_3gvta")
+NPCDialogue = "This hunt... it's just so... wild"
+metadata/_custom_type_script = "uid://btg4f3a2dx8rf"
