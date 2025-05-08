@@ -2,12 +2,15 @@ extends CanvasLayer
 
 @onready var spawn_location = $spawn_path/spawn_location
 @onready var pan = $pan
+signal cooking_minigame_ended
+
 var food = preload("res://scenes/food.tscn")
 var click_debounce = false
 var points = 0
 var food_amount = 10
 var all_food = []
 
+var MINIGAME_DEBOUNCE = false
 var MINIGAME_ENABLED = false
 
 func _launch_food():
@@ -21,6 +24,8 @@ func _launch_food():
 	
 
 func start():
+	if MINIGAME_DEBOUNCE: return
+	MINIGAME_DEBOUNCE = true
 	MINIGAME_ENABLED = true
 	food_amount = 10
 	points = 0
@@ -40,13 +45,15 @@ func start():
 func _end_minigame():
 	print("Ending cooking minigame")
 	print("Total Points: " + str(points))
-	
+	points = clamp(points,0,999)
 	var wage = MoneyHandler.get_wage()
 	var moneyToEarn = wage * points
 	moneyToEarn = moneyToEarn / 10
 	
 	MoneyHandler.increase_income("Worker",moneyToEarn,"Add")
+	MINIGAME_DEBOUNCE = false
 	MINIGAME_ENABLED = false
+	cooking_minigame_ended.emit()
 	visible = false
 	
 
