@@ -351,22 +351,24 @@ script = ExtResource("13_x22eu")
 position = Vector2(126, -1132)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_1nolc")
+frame = 6
+frame_progress = 0.278589
 
 [node name="House3" type="AnimatedSprite2D" parent="animated_objects"]
 z_index = -2
-position = Vector2(-192, -1368)
+position = Vector2(-192, -1363)
 sprite_frames = SubResource("SpriteFrames_7ma7k")
 frame_progress = 0.57277
 
 [node name="House2" type="AnimatedSprite2D" parent="animated_objects"]
 z_index = -2
-position = Vector2(-968, -1368)
+position = Vector2(-968, -1363)
 sprite_frames = SubResource("SpriteFrames_7ma7k")
 frame_progress = 0.57277
 
 [node name="House" type="AnimatedSprite2D" parent="animated_objects"]
 z_index = -2
-position = Vector2(2286, -1369)
+position = Vector2(2286, -1363)
 sprite_frames = SubResource("SpriteFrames_7ma7k")
 frame_progress = 0.57277
 
@@ -375,13 +377,14 @@ position = Vector2(4053, 494)
 
 [node name="House2" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(583, -1335)
+position = Vector2(583, -1330)
 scale = Vector2(2, 2)
 texture = ExtResource("17_mu4dy")
 
 [node name="Kitchen" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(1427, -1279)
+position = Vector2(1427, -1340)
+scale = Vector2(1.25, 1.25)
 texture = ExtResource("21_0y5px")
 
 [node name="Transition2" parent="." instance=ExtResource("12_11pq3")]
