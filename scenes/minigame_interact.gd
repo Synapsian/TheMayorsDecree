@@ -15,9 +15,12 @@ var interaction_debounce = false
 	#Tasks.add_task("mayor_exit_building","Exit the building",Vector2(-1087.0,-3322.0))
 # \\ Tasks
 
-func _on_interaction():
+func _on_interaction(body:CharacterBody2D):
+	body.anchor()
 	var minigame_name = get_meta("minigame_name")
 	MinigameHandler.new_minigame(minigame_name)
+	await MinigameHandler.minigame_finished
+	body.anchor(false)
 
 func _process(_delta: float) -> void:
 	# Must be enabled, player must be inside, interact button must have just been pressed
@@ -38,7 +41,7 @@ func _process(_delta: float) -> void:
 		# Ended if player character not found
 
 		# Call function here
-		_on_interaction()
+		_on_interaction(body)
 		# // Creates a new timer, awaits it, and then gets rid of it/
 		var newtimer = Timer.new()
 		newtimer.wait_time = 3

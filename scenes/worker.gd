@@ -3,6 +3,10 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+var ANCHORED = false
+
+func anchor(anchored:bool = true):
+	ANCHORED = anchored
 
 func _physics_process(delta: float) -> void:
 	
@@ -22,6 +26,8 @@ func _physics_process(delta: float) -> void:
 		direction = -1
 	elif Input.is_action_pressed("move_right"):
 		direction = 1
+	if ANCHORED == true:
+		direction = 0
 	
 	if direction:
 		if direction < 0:
@@ -33,7 +39,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		$sprite.play("idle")
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	
 	move_and_slide()
 
 
