@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://b087m2d2tfhaj"]
+[gd_scene load_steps=11 format=3 uid="uid://b087m2d2tfhaj"]
 
 [ext_resource type="Script" uid="uid://dpgq3u5gbeyyh" path="res://SCRIPTS/minigame_handler.gd" id="1_ok36d"]
 [ext_resource type="Script" uid="uid://dy1g2736ej0ck" path="res://SCRIPTS/cooking_minigame.gd" id="2_lre2m"]
 [ext_resource type="Texture2D" uid="uid://cbqi4tn7o6278" path="res://SPRITES/minigames/cooking_fire.png" id="3_uj045"]
 [ext_resource type="Texture2D" uid="uid://ra1n6thn0det" path="res://SPRITES/minigames/pan.png" id="4_jemb3"]
 [ext_resource type="Texture2D" uid="uid://b33u5j54j2g8j" path="res://SPRITES/minigames/panflip.png" id="5_uga2l"]
+[ext_resource type="FontFile" uid="uid://cf50jb0yimike" path="res://FONTS/GeosansLight.ttf" id="6_lre2m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpyik"]
 size = Vector2(300, 39.5)
@@ -104,6 +105,27 @@ collision_mask = 8
 [node name="collision_shape" type="CollisionShape2D" parent="cooking_minigame/pan/hitbox"]
 position = Vector2(8, -11.5)
 shape = SubResource("RectangleShape2D_rbnn2")
+
+[node name="controls" type="Label" parent="cooking_minigame"]
+offset_left = 425.0
+offset_top = 119.0
+offset_right = 727.0
+offset_bottom = 168.0
+theme_override_fonts/font = ExtResource("6_lre2m")
+text = "click to flip the pan
+move your mouse to move the pan"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="goal" type="Label" parent="cooking_minigame"]
+offset_left = 425.0
+offset_top = 479.0
+offset_right = 727.0
+offset_bottom = 528.0
+theme_override_fonts/font = ExtResource("6_lre2m")
+text = "don't let the food touch the fire"
+horizontal_alignment = 1
+uppercase = true
 
 [connection signal="cooking_minigame_ended" from="cooking_minigame" to="." method="_emit_finished_signal"]
 [connection signal="area_entered" from="cooking_minigame/fire/hitbox" to="cooking_minigame" method="_on_hitbox_area_entered"]
