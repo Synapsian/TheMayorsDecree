@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddl48aoebfyu4"
-path="res://.godot/imported/mcporkchop.png-3345034cc81d829dfc2adc1bf6666e14.ctex"
+uid="uid://bcn05d8h7oekr"
+path="res://.godot/imported/chickenleg.png-75702949d23de670abcda2b9af592303.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SPRITES/npcs/mcporkchop.png"
-dest_files=["res://.godot/imported/mcporkchop.png-3345034cc81d829dfc2adc1bf6666e14.ctex"]
+source_file="res://SPRITES/minigames/chickenleg.png"
+dest_files=["res://.godot/imported/chickenleg.png-75702949d23de670abcda2b9af592303.ctex"]
 
 [params]
 
