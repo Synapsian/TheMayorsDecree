@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b066gd02iaw4b"]
 
-[ext_resource type="FontFile" uid="uid://shvvdl5e4cdy" path="res://fonts/SimplySquare.ttf" id="1_ncxyx"]
-[ext_resource type="Script" uid="uid://c1q1b4h1wmnvw" path="res://scenes/start_screen.gd" id="1_pevhg"]
+[ext_resource type="FontFile" uid="uid://shvvdl5e4cdy" path="res://FONTS/SimplySquare.ttf" id="1_ncxyx"]
+[ext_resource type="Script" uid="uid://c1q1b4h1wmnvw" path="res://SCRIPTS/start_screen.gd" id="1_pevhg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pevhg"]
 font = ExtResource("1_ncxyx")

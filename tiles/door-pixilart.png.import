@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://38qmkmfx20bm"
-path="res://.godot/imported/door-pixilart.png-ad3e399050a0023f824aa260fb6a6002.ctex"
+path="res://.godot/imported/door-pixilart.png-c0057552257d9025f769441d9cb52f94.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles/door-pixilart.png"
-dest_files=["res://.godot/imported/door-pixilart.png-ad3e399050a0023f824aa260fb6a6002.ctex"]
+source_file="res://TILES/door-pixilart.png"
+dest_files=["res://.godot/imported/door-pixilart.png-c0057552257d9025f769441d9cb52f94.ctex"]
 
 [params]
 

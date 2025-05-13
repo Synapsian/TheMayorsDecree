@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dq4qu7qn6qdva"]
 
-[ext_resource type="Script" uid="uid://h6602vtjla5k" path="res://scenes/minigame_interact.gd" id="1_7xxgy"]
-[ext_resource type="Texture2D" uid="uid://gkoa16u0ehbw" path="res://sprites/Arrow.png" id="1_cdne8"]
+[ext_resource type="Script" uid="uid://h6602vtjla5k" path="res://SCRIPTS/minigame_interact.gd" id="1_7xxgy"]
+[ext_resource type="Texture2D" uid="uid://gkoa16u0ehbw" path="res://SPRITES/controls/Arrow.png" id="1_cdne8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7xxgy"]
 size = Vector2(131, 255)

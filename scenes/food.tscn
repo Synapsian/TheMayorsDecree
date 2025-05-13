@@ -1,20 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://c6tytykmnwod5"]
 
-[ext_resource type="Script" uid="uid://cvu4tgutpokcv" path="res://scenes/food.gd" id="1_pohk7"]
-[ext_resource type="Texture2D" uid="uid://ddl48aoebfyu4" path="res://sprites/mcporkchop.png" id="2_pohk7"]
+[ext_resource type="Script" uid="uid://cvu4tgutpokcv" path="res://SCRIPTS/food.gd" id="1_y63cd"]
+[ext_resource type="Texture2D" uid="uid://ddl48aoebfyu4" path="res://SPRITES/npcs/mcporkchop.png" id="2_nb8hb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pohk7"]
 
 [node name="food" type="CharacterBody2D"]
 collision_layer = 8
 collision_mask = 0
-script = ExtResource("1_pohk7")
+script = ExtResource("1_y63cd")
 metadata/no_gravity = false
 metadata/flip_times = 0
 
 [node name="sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("2_pohk7")
+texture = ExtResource("2_nb8hb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_pohk7")

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cf50jb0yimike"
-path="res://.godot/imported/GeosansLight.ttf-a88017c5419e56bf6713498164392b98.fontdata"
+path="res://.godot/imported/GeosansLight.ttf-f439dddedb462cbc314f9cfad883144a.fontdata"
 
 [deps]
 
-source_file="res://fonts/GeosansLight.ttf"
-dest_files=["res://.godot/imported/GeosansLight.ttf-a88017c5419e56bf6713498164392b98.fontdata"]
+source_file="res://FONTS/GeosansLight.ttf"
+dest_files=["res://.godot/imported/GeosansLight.ttf-f439dddedb462cbc314f9cfad883144a.fontdata"]
 
 [params]
 

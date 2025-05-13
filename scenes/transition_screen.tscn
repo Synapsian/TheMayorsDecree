@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bxdy1besb2vhh"]
 
-[ext_resource type="Script" uid="uid://cl0a2il7hu8sk" path="res://scenes/transition_screen.gd" id="1_5qayp"]
+[ext_resource type="Script" uid="uid://cl0a2il7hu8sk" path="res://SCRIPTS/transition_screen.gd" id="1_dwpjf"]
 
 [sub_resource type="Animation" id="Animation_uhg5o"]
 length = 0.001
@@ -55,7 +55,7 @@ _data = {
 }
 
 [node name="transition_screen" type="CanvasLayer"]
-script = ExtResource("1_5qayp")
+script = ExtResource("1_dwpjf")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = 99

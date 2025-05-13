@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djcp2ijvy84vr"
-path="res://.godot/imported/mayorhut.png-b9676cb6cb85214ece1f077e001dbae6.ctex"
+path="res://.godot/imported/mayorhut.png-f825e60a15810ca048a2e454a7e5b5f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/buildings/mayorhut.png"
-dest_files=["res://.godot/imported/mayorhut.png-b9676cb6cb85214ece1f077e001dbae6.ctex"]
+source_file="res://SPRITES/buildings/mayorhut.png"
+dest_files=["res://.godot/imported/mayorhut.png-f825e60a15810ca048a2e454a7e5b5f7.ctex"]
 
 [params]
 

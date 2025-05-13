@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://b087m2d2tfhaj"]
 
-[ext_resource type="Script" uid="uid://dpgq3u5gbeyyh" path="res://scenes/minigame_handler.gd" id="1_kp0wp"]
-[ext_resource type="Texture2D" uid="uid://cbqi4tn7o6278" path="res://sprites/cooking_fire.png" id="2_8p8bq"]
-[ext_resource type="Script" uid="uid://dy1g2736ej0ck" path="res://scenes/cooking_minigame.gd" id="2_rpyik"]
-[ext_resource type="Texture2D" uid="uid://ra1n6thn0det" path="res://sprites/pan.png" id="4_rbnn2"]
-[ext_resource type="Texture2D" uid="uid://b33u5j54j2g8j" path="res://sprites/panflip.png" id="5_q3kqe"]
+[ext_resource type="Script" uid="uid://dpgq3u5gbeyyh" path="res://SCRIPTS/minigame_handler.gd" id="1_ok36d"]
+[ext_resource type="Script" uid="uid://dy1g2736ej0ck" path="res://SCRIPTS/cooking_minigame.gd" id="2_lre2m"]
+[ext_resource type="Texture2D" uid="uid://cbqi4tn7o6278" path="res://SPRITES/minigames/cooking_fire.png" id="3_uj045"]
+[ext_resource type="Texture2D" uid="uid://ra1n6thn0det" path="res://SPRITES/minigames/pan.png" id="4_jemb3"]
+[ext_resource type="Texture2D" uid="uid://b33u5j54j2g8j" path="res://SPRITES/minigames/panflip.png" id="5_uga2l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpyik"]
 size = Vector2(300, 39.5)
@@ -19,7 +19,7 @@ point_count = 2
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_rbnn2")
+"texture": ExtResource("4_jemb3")
 }],
 "loop": true,
 "name": &"default",
@@ -27,7 +27,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_q3kqe")
+"texture": ExtResource("5_uga2l")
 }],
 "loop": true,
 "name": &"flip",
@@ -38,10 +38,10 @@ animations = [{
 size = Vector2(60, 47)
 
 [node name="minigame_handler" type="Node2D"]
-script = ExtResource("1_kp0wp")
+script = ExtResource("1_ok36d")
 
 [node name="cooking_minigame" type="CanvasLayer" parent="."]
-script = ExtResource("2_rpyik")
+script = ExtResource("2_lre2m")
 
 [node name="background" type="ColorRect" parent="cooking_minigame"]
 anchors_preset = 8
@@ -74,7 +74,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="fire" type="Sprite2D" parent="cooking_minigame"]
 position = Vector2(576, 424)
-texture = ExtResource("2_8p8bq")
+texture = ExtResource("3_uj045")
 
 [node name="hitbox" type="Area2D" parent="cooking_minigame/fire"]
 position = Vector2(-576, -424)

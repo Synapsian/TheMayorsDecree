@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://i8dal4ctfurm"]
 
-[ext_resource type="Texture2D" uid="uid://cuhoffs5a7c1q" path="res://sprites/gui/gold_progress_bar_background.png" id="1_3qwyy"]
-[ext_resource type="Script" uid="uid://cyihxjiur5cvv" path="res://scenes/gold_meter.gd" id="1_yba2u"]
-[ext_resource type="Texture2D" uid="uid://da3lv2egt35yr" path="res://sprites/gui/gold_progress_bar_frontground.png" id="2_yba2u"]
-[ext_resource type="Texture2D" uid="uid://cf0i7oc1kxrq5" path="res://sprites/gui/gold_progress_bar_outline.png" id="3_dtbd5"]
+[ext_resource type="Script" uid="uid://cyihxjiur5cvv" path="res://SCRIPTS/gold_meter.gd" id="1_o5m6h"]
+[ext_resource type="Texture2D" uid="uid://cuhoffs5a7c1q" path="res://SPRITES/gui/gold_progress_bar/gold_progress_bar_background.png" id="2_bmy0h"]
+[ext_resource type="Texture2D" uid="uid://cf0i7oc1kxrq5" path="res://SPRITES/gui/gold_progress_bar/gold_progress_bar_outline.png" id="3_fwivb"]
+[ext_resource type="Texture2D" uid="uid://da3lv2egt35yr" path="res://SPRITES/gui/gold_progress_bar/gold_progress_bar_frontground.png" id="4_jnfrh"]
 
 [node name="gold_meter" type="CanvasLayer"]
 visible = false
-script = ExtResource("1_yba2u")
+script = ExtResource("1_o5m6h")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 offset_left = 19.0
@@ -17,8 +17,8 @@ offset_bottom = 597.0
 max_value = 1.0
 step = 0.01
 fill_mode = 3
-texture_under = ExtResource("1_3qwyy")
-texture_over = ExtResource("3_dtbd5")
-texture_progress = ExtResource("2_yba2u")
+texture_under = ExtResource("2_bmy0h")
+texture_over = ExtResource("3_fwivb")
+texture_progress = ExtResource("4_jnfrh")
 tint_progress = Color(0.985069, 0.78827, 0.0330431, 1)
 metadata/_edit_group_ = true

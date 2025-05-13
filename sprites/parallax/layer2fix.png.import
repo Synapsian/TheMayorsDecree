@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csuacr148jq7n"
-path="res://.godot/imported/layer2fix.png-22f23ce33f148f69e8dcad15ed181590.ctex"
+path="res://.godot/imported/layer2fix.png-4befd92398d26e620b5ab01d47916be6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/parallax/layer2fix.png"
-dest_files=["res://.godot/imported/layer2fix.png-22f23ce33f148f69e8dcad15ed181590.ctex"]
+source_file="res://SPRITES/parallax/layer2fix.png"
+dest_files=["res://.godot/imported/layer2fix.png-4befd92398d26e620b5ab01d47916be6.ctex"]
 
 [params]
 

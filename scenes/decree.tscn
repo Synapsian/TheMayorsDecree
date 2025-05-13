@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bscoj03tyv50b"]
 
-[ext_resource type="Script" uid="uid://bgi2qxk2ydcf8" path="res://decree.gd" id="1_30x0s"]
-[ext_resource type="Texture2D" uid="uid://uiqcapty3kyq" path="res://sprites/decree.png" id="1_ybaby"]
+[ext_resource type="Script" uid="uid://bgi2qxk2ydcf8" path="res://SCRIPTS/decree.gd" id="1_30x0s"]
+[ext_resource type="Texture2D" uid="uid://uiqcapty3kyq" path="res://SPRITES/gui/decree.png" id="1_ybaby"]
 
 [node name="decree" type="CanvasLayer"]
 script = ExtResource("1_30x0s")

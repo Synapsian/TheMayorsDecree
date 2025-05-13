@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://dvf6jkiqynjjm"]
 
-[ext_resource type="Script" uid="uid://ryggrna0rash" path="res://scenes/happiness_meter.gd" id="1_g7nm0"]
-[ext_resource type="Texture2D" uid="uid://duwjm8b18guwv" path="res://sprites/happiness_bar.png" id="1_ka4qx"]
-[ext_resource type="Texture2D" uid="uid://b0lc16tptfcrp" path="res://sprites/happiness_face_5.png" id="2_yuqj8"]
-[ext_resource type="Texture2D" uid="uid://bmswmmuj8384n" path="res://sprites/happiness_face_2.png" id="3_g7nm0"]
-[ext_resource type="Texture2D" uid="uid://c8opv2gykivdy" path="res://sprites/happiness_face_3.png" id="4_fihpg"]
-[ext_resource type="Texture2D" uid="uid://d7s0rx1dy1xr" path="res://sprites/happiness_face_1.png" id="5_cbd1d"]
-[ext_resource type="Texture2D" uid="uid://byatruwovvlg8" path="res://sprites/happiness_face_4.png" id="6_tt6p2"]
+[ext_resource type="Script" uid="uid://ryggrna0rash" path="res://SCRIPTS/happiness_meter.gd" id="1_jsjob"]
+[ext_resource type="Texture2D" uid="uid://duwjm8b18guwv" path="res://SPRITES/gui/happiness_bar/happiness_bar.png" id="2_s8ddf"]
+[ext_resource type="Texture2D" uid="uid://b0lc16tptfcrp" path="res://SPRITES/gui/happiness_bar/happiness_face_5.png" id="3_nm0u5"]
+[ext_resource type="Texture2D" uid="uid://bmswmmuj8384n" path="res://SPRITES/gui/happiness_bar/happiness_face_2.png" id="4_s1wul"]
+[ext_resource type="Texture2D" uid="uid://c8opv2gykivdy" path="res://SPRITES/gui/happiness_bar/happiness_face_3.png" id="5_l816s"]
+[ext_resource type="Texture2D" uid="uid://d7s0rx1dy1xr" path="res://SPRITES/gui/happiness_bar/happiness_face_1.png" id="6_avlxp"]
+[ext_resource type="Texture2D" uid="uid://byatruwovvlg8" path="res://SPRITES/gui/happiness_bar/happiness_face_4.png" id="7_o0nt3"]
 
 [sub_resource type="Curve2D" id="Curve2D_yuqj8"]
 _data = {
@@ -18,7 +18,7 @@ point_count = 2
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_yuqj8")
+"texture": ExtResource("3_nm0u5")
 }],
 "loop": true,
 "name": &"angry",
@@ -26,7 +26,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_g7nm0")
+"texture": ExtResource("4_s1wul")
 }],
 "loop": true,
 "name": &"happy",
@@ -34,7 +34,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_fihpg")
+"texture": ExtResource("5_l816s")
 }],
 "loop": true,
 "name": &"neutral",
@@ -42,7 +42,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_cbd1d")
+"texture": ExtResource("6_avlxp")
 }],
 "loop": true,
 "name": &"super_happy",
@@ -50,7 +50,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_tt6p2")
+"texture": ExtResource("7_o0nt3")
 }],
 "loop": true,
 "name": &"unhappy",
@@ -58,11 +58,11 @@ animations = [{
 }]
 
 [node name="happiness_meter" type="CanvasLayer"]
-script = ExtResource("1_g7nm0")
+script = ExtResource("1_jsjob")
 
 [node name="bar" type="Sprite2D" parent="."]
 position = Vector2(120, 621)
-texture = ExtResource("1_ka4qx")
+texture = ExtResource("2_s8ddf")
 metadata/_edit_group_ = true
 
 [node name="Path2D" type="Path2D" parent="."]

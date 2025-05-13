@@ -1,8 +1,8 @@
 [gd_scene load_steps=22 format=3 uid="uid://n0rgydpdohbv"]
 
-[ext_resource type="Script" uid="uid://l20a2udjtafb" path="res://scenes/worker.gd" id="1_8vnpx"]
-[ext_resource type="Texture2D" uid="uid://bq30e86j3fsxw" path="res://sprites/player/peasant-idle.png" id="1_26yh5"]
-[ext_resource type="Texture2D" uid="uid://bf58xd8yevs0c" path="res://sprites/player/peasant-run.png" id="3_sb737"]
+[ext_resource type="Script" uid="uid://l20a2udjtafb" path="res://SCRIPTS/worker.gd" id="1_8vnpx"]
+[ext_resource type="Texture2D" uid="uid://bq30e86j3fsxw" path="res://SPRITES/player/peasant-idle.png" id="1_26yh5"]
+[ext_resource type="Texture2D" uid="uid://bf58xd8yevs0c" path="res://SPRITES/player/peasant-run.png" id="3_sb737"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8vnpx"]
 atlas = ExtResource("1_26yh5")

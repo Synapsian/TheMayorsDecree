@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://b065narb3twlj"
-path="res://.godot/imported/CollegiateBlackFLF.ttf-8a4dfadc755569ad70cf6d2e9d897373.fontdata"
+path="res://.godot/imported/CollegiateBlackFLF.ttf-68051ab3e518b33ef8f5a0fd3e98e680.fontdata"
 
 [deps]
 
-source_file="res://fonts/CollegiateBlackFLF.ttf"
-dest_files=["res://.godot/imported/CollegiateBlackFLF.ttf-8a4dfadc755569ad70cf6d2e9d897373.fontdata"]
+source_file="res://FONTS/CollegiateBlackFLF.ttf"
+dest_files=["res://.godot/imported/CollegiateBlackFLF.ttf-68051ab3e518b33ef8f5a0fd3e98e680.fontdata"]
 
 [params]
 

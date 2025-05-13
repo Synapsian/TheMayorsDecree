@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://ke8fk4oe4r77"]
 
-[ext_resource type="Script" uid="uid://d2l2we4pptnkx" path="res://scenes/tasks.gd" id="1_820ab"]
-[ext_resource type="FontFile" uid="uid://cf50jb0yimike" path="res://fonts/GeosansLight.ttf" id="1_ydwq0"]
+[ext_resource type="Script" uid="uid://d2l2we4pptnkx" path="res://SCRIPTS/tasks.gd" id="1_pn57g"]
+[ext_resource type="FontFile" uid="uid://cf50jb0yimike" path="res://FONTS/GeosansLight.ttf" id="2_anq43"]
 
 [node name="tasks" type="CanvasLayer"]
-script = ExtResource("1_820ab")
+script = ExtResource("1_pn57g")
 
 [node name="container" type="ColorRect" parent="."]
 self_modulate = Color(0, 0, 0, 0.176471)
@@ -26,7 +26,7 @@ offset_left = -100.0
 offset_right = 101.0
 offset_bottom = 49.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("1_ydwq0")
+theme_override_fonts/font = ExtResource("2_anq43")
 text = "TASKS"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -48,6 +48,6 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="container/VBoxContainer"]
 visible = false
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_ydwq0")
+theme_override_fonts/font = ExtResource("2_anq43")
 text = "GO TO WORK"
 horizontal_alignment = 1

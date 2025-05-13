@@ -16,14 +16,24 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 
 [autoload]
 
-TransitionScreen="*res://scenes/transition_screen.tscn"
-Dialogue="*res://scenes/dialogue.tscn"
-Tasks="*res://scenes/tasks.tscn"
-Decree="*res://scenes/decree.tscn"
-MoneyHandler="*res://scenes/money_handler.tscn"
-MinigameHandler="*res://scenes/minigame_handler.tscn"
-HappinessMeter="*res://scenes/happiness_meter.tscn"
-GoldMeter="*res://scenes/gold_meter.tscn"
+TransitionScreen="*res://SCENES/transition_screen.tscn"
+Dialogue="*res://SCENES/dialogue.tscn"
+Tasks="*res://SCENES/tasks.tscn"
+Decree="*res://SCENES/decree.tscn"
+MoneyHandler="*res://SCENES/money_handler.tscn"
+MinigameHandler="*res://SCENES/minigame_handler.tscn"
+HappinessMeter="*res://SCENES/happiness_meter.tscn"
+GoldMeter="*res://SCENES/gold_meter.tscn"
+
+[file_customization]
+
+folder_colors={
+"res://FONTS/": "gray",
+"res://SCENES/": "red",
+"res://SCRIPTS/": "orange",
+"res://SPRITES/": "yellow",
+"res://TILES/": "green"
+}
 
 [global_group]
 
