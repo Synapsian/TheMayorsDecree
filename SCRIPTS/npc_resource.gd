@@ -2,6 +2,7 @@ extends Sprite2D
 
 @export var DialogueText : String
 @export var DialogueSpeed : int
+@export var TranscendsReality : bool
 
 @onready var Hitbox = $Area2D
 @onready var Arrow = $Arrow
@@ -31,6 +32,9 @@ func _ready() -> void:
 	Hitbox.connect("body_exited",_body_exited)
 
 func _process(_delta: float) -> void:
+	if TranscendsReality:
+		skew = skew + 0.01
+	
 	if PlayerInside and Input.is_action_just_pressed("Interact"):
 		if Debounce: return
 		Debounce = true

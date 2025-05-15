@@ -407,20 +407,23 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("23_aftv2")
 stretch_mode = 3
 
-[node name="heathcliff" type="Sprite2D" parent="NPCs"]
-position = Vector2(1906, 634)
+[node name="sans" type="Sprite2D" parent="NPCs"]
+position = Vector2(1895, 553)
+skew = -1.09432
 texture = ExtResource("27_m4lfs")
 script = ExtResource("22_3o1ic")
-DialogueText = "This was truly our wild hunt."
+DialogueText = "sans undertale"
 DialogueSpeed = 1
+TranscendsReality = true
+metadata/_edit_group_ = true
 
-[node name="Area2D" type="Area2D" parent="NPCs/heathcliff"]
+[node name="Area2D" type="Area2D" parent="NPCs/sans"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/heathcliff/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/sans/Area2D"]
 position = Vector2(1, 3)
 shape = SubResource("RectangleShape2D_3o1ic")
 
-[node name="Arrow" type="TextureRect" parent="NPCs/heathcliff"]
+[node name="Arrow" type="TextureRect" parent="NPCs/sans"]
 visible = false
 offset_left = -8.0
 offset_top = -72.0
