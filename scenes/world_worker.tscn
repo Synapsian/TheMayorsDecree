@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=4 uid="uid://d3e8chpn8ij4n"]
+[gd_scene load_steps=70 format=4 uid="uid://d3e8chpn8ij4n"]
 
 [ext_resource type="Texture2D" uid="uid://bjme7yxj85j1w" path="res://TILES/brick.png" id="1_iblr0"]
 [ext_resource type="Texture2D" uid="uid://crn0k306qo2wn" path="res://TILES/grass.png" id="2_hny7u"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://dq4qu7qn6qdva" path="res://SCENES/minigame_interact.tscn" id="16_i3j12"]
 [ext_resource type="Texture2D" uid="uid://di1ayfmkw8l86" path="res://SPRITES/buildings/house2.png" id="17_mu4dy"]
 [ext_resource type="Texture2D" uid="uid://dbw8shmt52dlo" path="res://SPRITES/buildings/kitchen.png" id="21_0y5px"]
+[ext_resource type="Texture2D" uid="uid://dpnhypnuyd3v0" path="res://SPRITES/decoration/streetlamp.png" id="21_c6hiw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fwvsa"]
 texture = ExtResource("1_iblr0")
@@ -323,6 +324,63 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2v54"]
+atlas = ExtResource("21_c6hiw")
+region = Rect2(0, 0, 40, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0g0u"]
+atlas = ExtResource("21_c6hiw")
+region = Rect2(40, 0, 40, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d53wx"]
+atlas = ExtResource("21_c6hiw")
+region = Rect2(80, 0, 40, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kg382"]
+atlas = ExtResource("21_c6hiw")
+region = Rect2(120, 0, 40, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ljds"]
+atlas = ExtResource("21_c6hiw")
+region = Rect2(160, 0, 40, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxkwc"]
+atlas = ExtResource("21_c6hiw")
+region = Rect2(200, 0, 40, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekx3t"]
+atlas = ExtResource("21_c6hiw")
+region = Rect2(240, 0, 40, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s3n6s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2v54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0g0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d53wx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kg382")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ljds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxkwc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekx3t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="world_worker" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -351,26 +409,37 @@ script = ExtResource("13_x22eu")
 position = Vector2(126, -1132)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_1nolc")
-frame = 6
-frame_progress = 0.278589
+frame_progress = 0.915048
 
 [node name="House3" type="AnimatedSprite2D" parent="animated_objects"]
 z_index = -2
 position = Vector2(-192, -1363)
 sprite_frames = SubResource("SpriteFrames_7ma7k")
-frame_progress = 0.57277
+frame_progress = 0.299158
 
 [node name="House2" type="AnimatedSprite2D" parent="animated_objects"]
 z_index = -2
 position = Vector2(-968, -1363)
 sprite_frames = SubResource("SpriteFrames_7ma7k")
-frame_progress = 0.57277
+frame_progress = 0.864087
 
 [node name="House" type="AnimatedSprite2D" parent="animated_objects"]
 z_index = -2
 position = Vector2(2286, -1363)
 sprite_frames = SubResource("SpriteFrames_7ma7k")
-frame_progress = 0.57277
+frame_progress = 0.921256
+
+[node name="street_lamp" type="AnimatedSprite2D" parent="animated_objects"]
+position = Vector2(280, -1139)
+scale = Vector2(2, 2.085)
+sprite_frames = SubResource("SpriteFrames_s3n6s")
+frame_progress = 0.214162
+
+[node name="street_lamp2" type="AnimatedSprite2D" parent="animated_objects"]
+position = Vector2(-574, -1144)
+scale = Vector2(2, 2.174)
+sprite_frames = SubResource("SpriteFrames_s3n6s")
+frame_progress = 0.48607
 
 [node name="minigame_interact" parent="." instance=ExtResource("16_i3j12")]
 position = Vector2(4053, 494)
