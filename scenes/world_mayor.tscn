@@ -285,30 +285,35 @@ tile_map_data = PackedByteArray("AAAAAAQACQAAAAAAAAD//wQACQAAAAAAAAABAAQACQAAAAA
 tile_set = SubResource("TileSet_2m72k")
 
 [node name="outside_parralax" type="ParallaxBackground" parent="."]
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)
 scroll_ignore_camera_zoom = true
 
 [node name="Sky" type="ParallaxLayer" parent="outside_parralax"]
-motion_mirroring = Vector2(3000, 0)
+motion_mirroring = Vector2(1000, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="outside_parralax/Sky"]
-scale = Vector2(3, 3)
+texture_repeat = 2
 texture = ExtResource("11_ib0vl")
+region_rect = Rect2(0, 0, 1000, 1000)
 
 [node name="Layer2" type="ParallaxLayer" parent="outside_parralax"]
-motion_scale = Vector2(0.25, 0.25)
-motion_mirroring = Vector2(3000, 0)
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1000, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="outside_parralax/Layer2"]
-scale = Vector2(3, 3)
+texture_repeat = 2
 texture = ExtResource("12_l64x6")
+region_rect = Rect2(0, 0, 1000, 1000)
 
 [node name="Layer1" type="ParallaxLayer" parent="outside_parralax"]
-motion_scale = Vector2(0.5, 0.5)
-motion_mirroring = Vector2(3000, 0)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1000, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="outside_parralax/Layer1"]
-scale = Vector2(3, 3)
+texture_repeat = 2
 texture = ExtResource("13_wepko")
+region_rect = Rect2(0, 0, 1000, 1000)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -5

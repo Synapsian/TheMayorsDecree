@@ -417,31 +417,31 @@ script = ExtResource("13_x22eu")
 position = Vector2(126, -1132)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_1nolc")
-frame_progress = 0.590361
+frame_progress = 0.485198
 
 [node name="House3" type="AnimatedSprite2D" parent="animated_objects"]
 z_index = -2
 position = Vector2(-192, -1363)
 sprite_frames = SubResource("SpriteFrames_7ma7k")
-frame_progress = 0.974469
+frame_progress = 0.869306
 
 [node name="House2" type="AnimatedSprite2D" parent="animated_objects"]
 z_index = -2
 position = Vector2(-968, -1363)
 sprite_frames = SubResource("SpriteFrames_7ma7k")
-frame_progress = 0.539399
+frame_progress = 0.434236
 
 [node name="House" type="AnimatedSprite2D" parent="animated_objects"]
 z_index = -2
 position = Vector2(2286, -1363)
 sprite_frames = SubResource("SpriteFrames_7ma7k")
-frame_progress = 0.596569
+frame_progress = 0.491406
 
 [node name="street_lamp" type="AnimatedSprite2D" parent="animated_objects"]
 position = Vector2(280, -1139)
 scale = Vector2(2, 2.085)
 sprite_frames = SubResource("SpriteFrames_s3n6s")
-frame_progress = 0.889474
+frame_progress = 0.784311
 
 [node name="street_lamp2" type="AnimatedSprite2D" parent="animated_objects"]
 position = Vector2(-574, -1144)
