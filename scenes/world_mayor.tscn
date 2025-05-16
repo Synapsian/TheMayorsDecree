@@ -273,11 +273,12 @@ size = Vector2(186.587, 244)
 
 [node name="character" parent="." instance=ExtResource("1_g00bn")]
 z_index = 5
-position = Vector2(57, 573)
+position = Vector2(500, 500)
 metadata/transition_debounce = false
 metadata/anchored = false
 metadata/money = 1000.0
 metadata/money_to_earn = 100.0
+metadata/_edit_group_ = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(135, 245)

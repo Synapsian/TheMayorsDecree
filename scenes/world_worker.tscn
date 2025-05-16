@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=4 uid="uid://d3e8chpn8ij4n"]
+[gd_scene load_steps=75 format=4 uid="uid://d3e8chpn8ij4n"]
 
 [ext_resource type="Texture2D" uid="uid://bjme7yxj85j1w" path="res://TILES/brick.png" id="1_iblr0"]
 [ext_resource type="Texture2D" uid="uid://crn0k306qo2wn" path="res://TILES/grass.png" id="2_hny7u"]
@@ -25,6 +25,9 @@
 [ext_resource type="Texture2D" uid="uid://di1ayfmkw8l86" path="res://SPRITES/buildings/house2.png" id="17_mu4dy"]
 [ext_resource type="Texture2D" uid="uid://dbw8shmt52dlo" path="res://SPRITES/buildings/kitchen.png" id="21_0y5px"]
 [ext_resource type="Texture2D" uid="uid://dpnhypnuyd3v0" path="res://SPRITES/decoration/streetlamp.png" id="21_c6hiw"]
+[ext_resource type="Texture2D" uid="uid://cv7mbbpd84lih" path="res://SPRITES/parallax/sky.png" id="26_kg382"]
+[ext_resource type="Texture2D" uid="uid://csuacr148jq7n" path="res://SPRITES/parallax/layer2fix.png" id="27_8ljds"]
+[ext_resource type="Texture2D" uid="uid://bas6hhgc6p7f1" path="res://SPRITES/parallax/layer1.png" id="28_vxkwc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fwvsa"]
 texture = ExtResource("1_iblr0")
@@ -483,6 +486,38 @@ position = Vector2(1, -47.5)
 
 [node name="teleport_location" parent="Transition3" index="2"]
 position = Vector2(-1385, -1679)
+
+[node name="outside_parralax" type="ParallaxBackground" parent="."]
+offset = Vector2(0, -2000)
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, -2000)
+scroll_ignore_camera_zoom = true
+
+[node name="Sky" type="ParallaxLayer" parent="outside_parralax"]
+motion_mirroring = Vector2(1000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="outside_parralax/Sky"]
+texture_repeat = 2
+texture = ExtResource("26_kg382")
+region_rect = Rect2(0, 0, 1000, 1000)
+
+[node name="Layer2" type="ParallaxLayer" parent="outside_parralax"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="outside_parralax/Layer2"]
+texture_repeat = 2
+texture = ExtResource("27_8ljds")
+region_rect = Rect2(0, 0, 1000, 1000)
+
+[node name="Layer1" type="ParallaxLayer" parent="outside_parralax"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="outside_parralax/Layer1"]
+texture_repeat = 2
+texture = ExtResource("28_vxkwc")
+region_rect = Rect2(0, 0, 1000, 1000)
 
 [editable path="Transition"]
 [editable path="Transition2"]
