@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://shvvdl5e4cdy"
-path="res://.godot/imported/SimplySquare.ttf-1a88aad60747187f3521bb43f60d3f32.fontdata"
+path="res://.godot/imported/SimplySquare.ttf-293af43e1fe4a89b48cdc922b984d8aa.fontdata"
 
 [deps]
 
-source_file="res://FONTS/SimplySquare.ttf"
-dest_files=["res://.godot/imported/SimplySquare.ttf-1a88aad60747187f3521bb43f60d3f32.fontdata"]
+source_file="res://fonts/SimplySquare.ttf"
+dest_files=["res://.godot/imported/SimplySquare.ttf-293af43e1fe4a89b48cdc922b984d8aa.fontdata"]
 
 [params]
 

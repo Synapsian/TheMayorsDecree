@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://p4bjqukyvci5"
-path="res://.godot/imported/Red Carpet.png-7803ff030a8a7469f30dd06ff51fbd41.ctex"
+path="res://.godot/imported/Red Carpet.png-747167b479a7bb91dafc26f1f3400482.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TILES/Red Carpet.png"
-dest_files=["res://.godot/imported/Red Carpet.png-7803ff030a8a7469f30dd06ff51fbd41.ctex"]
+source_file="res://tiles/Red Carpet.png"
+dest_files=["res://.godot/imported/Red Carpet.png-747167b479a7bb91dafc26f1f3400482.ctex"]
 
 [params]
 

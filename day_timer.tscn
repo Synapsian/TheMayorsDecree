@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cwtlpicdhfhyh" path="res://day_timer.gd" id="1_ga2d6"]
 [ext_resource type="Texture2D" uid="uid://cil5saslyg742" path="res://timer.png" id="1_mbr0q"]
-[ext_resource type="FontFile" uid="uid://cf50jb0yimike" path="res://FONTS/GeosansLight.ttf" id="2_ycwl3"]
+[ext_resource type="FontFile" uid="uid://cf50jb0yimike" path="res://fonts/GeosansLight.ttf" id="2_ycwl3"]
 
 [node name="day_timer" type="CanvasLayer"]
 script = ExtResource("1_ga2d6")

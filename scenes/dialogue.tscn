@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c8qaq5x2p02bk"]
 
 [ext_resource type="Script" uid="uid://daw7c1uk2706p" path="res://SCRIPTS/dialogue.gd" id="1_4pmsi"]
-[ext_resource type="FontFile" uid="uid://shvvdl5e4cdy" path="res://FONTS/SimplySquare.ttf" id="2_xy85x"]
+[ext_resource type="FontFile" uid="uid://shvvdl5e4cdy" path="res://fonts/SimplySquare.ttf" id="2_xy85x"]
 
 [node name="dialogue" type="CanvasLayer"]
 script = ExtResource("1_4pmsi")

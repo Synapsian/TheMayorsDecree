@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cuhoffs5a7c1q"
-path="res://.godot/imported/gold_progress_bar_background.png-764d1098e7f190e98806b6a3409e7e5f.ctex"
+path="res://.godot/imported/gold_progress_bar_background.png-f055fdb51611e83a83ee7f23870bed95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SPRITES/gui/gold_progress_bar/gold_progress_bar_background.png"
-dest_files=["res://.godot/imported/gold_progress_bar_background.png-764d1098e7f190e98806b6a3409e7e5f.ctex"]
+source_file="res://sprites/gui/gold_progress_bar/gold_progress_bar_background.png"
+dest_files=["res://.godot/imported/gold_progress_bar_background.png-f055fdb51611e83a83ee7f23870bed95.ctex"]
 
 [params]
 

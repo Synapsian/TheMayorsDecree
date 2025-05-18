@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 var ANCHORED = false
+var FIRST_TRANSITION = false
 
 func anchor(anchored:bool = true):
 	ANCHORED = anchored
@@ -44,6 +45,10 @@ func _physics_process(delta: float) -> void:
 
 
 func transition_set_position(new_position: Vector2) -> void:
+	if not FIRST_TRANSITION:
+		FIRST_TRANSITION = true
+		DayTimer.start_timer()
+	
 	TransitionScreen.transition()
 	await TransitionScreen.on_transition_finished
 	position = new_position

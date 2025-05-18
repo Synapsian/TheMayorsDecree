@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://duwjm8b18guwv"
-path="res://.godot/imported/happiness_bar.png-9637576fc83aa4db3cc0793f6ad3471f.ctex"
+path="res://.godot/imported/happiness_bar.png-4b0536eb2346f922a53a8ae4a24f6c09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SPRITES/gui/happiness_bar/happiness_bar.png"
-dest_files=["res://.godot/imported/happiness_bar.png-9637576fc83aa4db3cc0793f6ad3471f.ctex"]
+source_file="res://sprites/gui/happiness_bar/happiness_bar.png"
+dest_files=["res://.godot/imported/happiness_bar.png-4b0536eb2346f922a53a8ae4a24f6c09.ctex"]
 
 [params]
 

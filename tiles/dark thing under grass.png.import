@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnelpcp717m2x"
-path="res://.godot/imported/dark thing under grass.png-7f3e6fb3b5d7fe3486a3c02c2164a7ff.ctex"
+path="res://.godot/imported/dark thing under grass.png-69d9d9dc9e0a3ecade57a78f74e5b0ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TILES/dark thing under grass.png"
-dest_files=["res://.godot/imported/dark thing under grass.png-7f3e6fb3b5d7fe3486a3c02c2164a7ff.ctex"]
+source_file="res://tiles/dark thing under grass.png"
+dest_files=["res://.godot/imported/dark thing under grass.png-69d9d9dc9e0a3ecade57a78f74e5b0ac.ctex"]
 
 [params]
 
