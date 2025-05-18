@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b33u5j54j2g8j"
-path="res://.godot/imported/panflip.png-d97b43a79913268592c4ff681f955591.ctex"
+path="res://.godot/imported/panflip.png-c57b9b72d2f09bc81e66a34cad5d7122.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SPRITES/minigames/panflip.png"
-dest_files=["res://.godot/imported/panflip.png-d97b43a79913268592c4ff681f955591.ctex"]
+source_file="res://sprites/minigames/panflip.png"
+dest_files=["res://.godot/imported/panflip.png-c57b9b72d2f09bc81e66a34cad5d7122.ctex"]
 
 [params]
 

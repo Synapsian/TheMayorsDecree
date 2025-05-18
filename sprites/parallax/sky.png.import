@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cv7mbbpd84lih"
-path="res://.godot/imported/sky.png-a3dbabd2949bdc03b50879b821223799.ctex"
+path="res://.godot/imported/sky.png-036fe3ff4ce47794983986339eb1cf92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SPRITES/parallax/sky.png"
-dest_files=["res://.godot/imported/sky.png-a3dbabd2949bdc03b50879b821223799.ctex"]
+source_file="res://sprites/parallax/sky.png"
+dest_files=["res://.godot/imported/sky.png-036fe3ff4ce47794983986339eb1cf92.ctex"]
 
 [params]
 

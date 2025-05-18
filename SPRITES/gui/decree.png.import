@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://uiqcapty3kyq"
-path="res://.godot/imported/decree.png-c6edab568e7fe77ca372bb3432c3f9d8.ctex"
+path="res://.godot/imported/decree.png-9f7cd5879d21f4aa4ad9b1c39bd68353.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SPRITES/gui/decree.png"
-dest_files=["res://.godot/imported/decree.png-c6edab568e7fe77ca372bb3432c3f9d8.ctex"]
+source_file="res://sprites/gui/decree.png"
+dest_files=["res://.godot/imported/decree.png-9f7cd5879d21f4aa4ad9b1c39bd68353.ctex"]
 
 [params]
 
