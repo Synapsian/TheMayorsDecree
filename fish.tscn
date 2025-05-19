@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dba2k1qgruioj"]
+[gd_scene load_steps=4 format=3 uid="uid://dba2k1qgruioj"]
 
+[ext_resource type="Script" uid="uid://bxcrc8i7k02xp" path="res://fish.gd" id="1_hgn23"]
 [ext_resource type="Texture2D" uid="uid://3oimnwpb2kqs" path="res://fisch.png" id="1_xu20i"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hgn23"]
@@ -7,6 +8,7 @@ radius = 11.0
 height = 42.0
 
 [node name="fish" type="CharacterBody2D"]
+script = ExtResource("1_hgn23")
 
 [node name="sprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_xu20i")

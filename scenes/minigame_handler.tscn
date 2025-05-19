@@ -137,6 +137,7 @@ horizontal_alignment = 1
 uppercase = true
 
 [node name="fishing_minigame" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("7_uj045")
 
 [node name="background" type="ColorRect" parent="fishing_minigame"]
