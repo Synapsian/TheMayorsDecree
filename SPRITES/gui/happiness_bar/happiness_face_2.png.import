@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmswmmuj8384n"
-path="res://.godot/imported/happiness_face_2.png-d083ea4e4e4f4aaad9be4f0f471dc1e2.ctex"
+path="res://.godot/imported/happiness_face_2.png-e7302dfaea96029de7ecee0907a3f0c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/gui/happiness_bar/happiness_face_2.png"
-dest_files=["res://.godot/imported/happiness_face_2.png-d083ea4e4e4f4aaad9be4f0f471dc1e2.ctex"]
+source_file="res://SPRITES/gui/happiness_bar/happiness_face_2.png"
+dest_files=["res://.godot/imported/happiness_face_2.png-e7302dfaea96029de7ecee0907a3f0c9.ctex"]
 
 [params]
 

@@ -24,8 +24,8 @@ MoneyHandler="*res://SCENES/money_handler.tscn"
 MinigameHandler="*res://SCENES/minigame_handler.tscn"
 HappinessMeter="*res://SCENES/happiness_meter.tscn"
 GoldMeter="*res://SCENES/gold_meter.tscn"
-DayTimer="*res://day_timer.tscn"
-EndScreen="*res://end_screen.tscn"
+DayTimer="*res://SCENES/day_timer.tscn"
+EndScreen="*res://SCENES/end_screen.tscn"
 
 [file_customization]
 

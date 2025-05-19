@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bf58xd8yevs0c"
-path="res://.godot/imported/peasant-run.png-dc622fe130f07c53f2671e96d90c9433.ctex"
+path="res://.godot/imported/peasant-run.png-21c0e5cc9d82057b9f025a60ac709a18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/player/peasant-run.png"
-dest_files=["res://.godot/imported/peasant-run.png-dc622fe130f07c53f2671e96d90c9433.ctex"]
+source_file="res://SPRITES/player/peasant-run.png"
+dest_files=["res://.godot/imported/peasant-run.png-21c0e5cc9d82057b9f025a60ac709a18.ctex"]
 
 [params]
 

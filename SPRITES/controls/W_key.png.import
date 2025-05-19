@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckj3iay36xqv4"
-path="res://.godot/imported/W_key.png-e4289eae509897c59064b174b8f2b8f6.ctex"
+path="res://.godot/imported/W_key.png-64e1749d7e6607ac181d8b4cfc3c5368.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/controls/W_key.png"
-dest_files=["res://.godot/imported/W_key.png-e4289eae509897c59064b174b8f2b8f6.ctex"]
+source_file="res://SPRITES/controls/W_key.png"
+dest_files=["res://.godot/imported/W_key.png-64e1749d7e6607ac181d8b4cfc3c5368.ctex"]
 
 [params]
 

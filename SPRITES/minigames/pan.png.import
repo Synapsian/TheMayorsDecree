@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ra1n6thn0det"
-path="res://.godot/imported/pan.png-1087eb1ef40adffb5db12b7e5b95799e.ctex"
+path="res://.godot/imported/pan.png-dac5fe4c1649800549e9ea6235cd919a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/minigames/pan.png"
-dest_files=["res://.godot/imported/pan.png-1087eb1ef40adffb5db12b7e5b95799e.ctex"]
+source_file="res://SPRITES/minigames/pan.png"
+dest_files=["res://.godot/imported/pan.png-dac5fe4c1649800549e9ea6235cd919a.ctex"]
 
 [params]
 

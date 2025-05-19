@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5ngdg2sf06t1"
-path="res://.godot/imported/greybricktile2.png-fe34cfeed13bf0ef55e3679a381823ab.ctex"
+path="res://.godot/imported/greybricktile2.png-f266cb6ad016b57deb973c85d97828b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/placeholder/greybricktile2.png"
-dest_files=["res://.godot/imported/greybricktile2.png-fe34cfeed13bf0ef55e3679a381823ab.ctex"]
+source_file="res://SPRITES/placeholder/greybricktile2.png"
+dest_files=["res://.godot/imported/greybricktile2.png-f266cb6ad016b57deb973c85d97828b3.ctex"]
 
 [params]
 

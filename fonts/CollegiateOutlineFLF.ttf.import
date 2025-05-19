@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://hhlfskx7bjf0"
-path="res://.godot/imported/CollegiateOutlineFLF.ttf-3cfc5771c77d9ba54825b2dc463177e7.fontdata"
+path="res://.godot/imported/CollegiateOutlineFLF.ttf-6459ad7ef5bc516ad67dba848c2b80b4.fontdata"
 
 [deps]
 
-source_file="res://fonts/CollegiateOutlineFLF.ttf"
-dest_files=["res://.godot/imported/CollegiateOutlineFLF.ttf-3cfc5771c77d9ba54825b2dc463177e7.fontdata"]
+source_file="res://FONTS/CollegiateOutlineFLF.ttf"
+dest_files=["res://.godot/imported/CollegiateOutlineFLF.ttf-6459ad7ef5bc516ad67dba848c2b80b4.fontdata"]
 
 [params]
 

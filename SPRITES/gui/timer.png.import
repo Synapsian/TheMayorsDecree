@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cil5saslyg742"
-path="res://.godot/imported/timer.png-2e679a8f4f848b2d30498e1280b7d687.ctex"
+path="res://.godot/imported/timer.png-772b1a7d3900c4ffc99be975add5f503.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://timer.png"
-dest_files=["res://.godot/imported/timer.png-2e679a8f4f848b2d30498e1280b7d687.ctex"]
+source_file="res://SPRITES/gui/timer.png"
+dest_files=["res://.godot/imported/timer.png-772b1a7d3900c4ffc99be975add5f503.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddl48aoebfyu4"
-path="res://.godot/imported/mcporkchop.png-155ac14758e0d9990972fb44f10bb06f.ctex"
+path="res://.godot/imported/mcporkchop.png-df4007019986f25e390bb9d930ae3ad2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/placeholder/mcporkchop.png"
-dest_files=["res://.godot/imported/mcporkchop.png-155ac14758e0d9990972fb44f10bb06f.ctex"]
+source_file="res://SPRITES/placeholder/mcporkchop.png"
+dest_files=["res://.godot/imported/mcporkchop.png-df4007019986f25e390bb9d930ae3ad2.ctex"]
 
 [params]
 
