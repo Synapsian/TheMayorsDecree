@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dba2k1qgruioj"]
+
+[ext_resource type="Texture2D" uid="uid://3oimnwpb2kqs" path="res://fisch.png" id="1_xu20i"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hgn23"]
+radius = 11.0
+height = 42.0
+
+[node name="fish" type="CharacterBody2D"]
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_xu20i")
+
+[node name="collision_shape" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_hgn23")

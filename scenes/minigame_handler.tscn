@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b087m2d2tfhaj"]
+[gd_scene load_steps=12 format=3 uid="uid://b087m2d2tfhaj"]
 
 [ext_resource type="Script" uid="uid://dpgq3u5gbeyyh" path="res://SCRIPTS/minigame_handler.gd" id="1_ok36d"]
 [ext_resource type="Script" uid="uid://dy1g2736ej0ck" path="res://SCRIPTS/cooking_minigame.gd" id="2_lre2m"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ra1n6thn0det" path="res://SPRITES/minigames/pan.png" id="4_jemb3"]
 [ext_resource type="Texture2D" uid="uid://b33u5j54j2g8j" path="res://SPRITES/minigames/panflip.png" id="5_uga2l"]
 [ext_resource type="FontFile" uid="uid://cf50jb0yimike" path="res://FONTS/GeosansLight.ttf" id="6_lre2m"]
+[ext_resource type="Script" uid="uid://c6f7plih15jqn" path="res://SCENES/fishing_minigame.gd" id="7_uj045"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpyik"]
 size = Vector2(300, 39.5)
@@ -42,6 +43,7 @@ size = Vector2(60, 47)
 script = ExtResource("1_ok36d")
 
 [node name="cooking_minigame" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("2_lre2m")
 
 [node name="background" type="ColorRect" parent="cooking_minigame"]
@@ -126,6 +128,24 @@ theme_override_fonts/font = ExtResource("6_lre2m")
 text = "don't let the food touch the fire"
 horizontal_alignment = 1
 uppercase = true
+
+[node name="fishing_minigame" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("7_uj045")
+
+[node name="background" type="ColorRect" parent="fishing_minigame"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.344659, 0.810686, 0.999999, 1)
 
 [connection signal="cooking_minigame_ended" from="cooking_minigame" to="." method="_emit_finished_signal"]
 [connection signal="area_entered" from="cooking_minigame/fire/hitbox" to="cooking_minigame" method="_on_hitbox_area_entered"]
