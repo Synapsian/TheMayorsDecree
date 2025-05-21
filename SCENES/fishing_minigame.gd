@@ -4,6 +4,7 @@ extends CanvasLayer
 @onready var spawn_location = $fish_spawnpoints/fish_spawnlocation
 @onready var midpoint = $midpoint
 @onready var bounding_boxes = $bounding_boxes
+@onready var crosshair = $crosshair
 
 var points = 0
 
@@ -16,7 +17,7 @@ func _ready() -> void:
 
 func _bounding_box_entered(body:Node2D):
 	if body.is_in_group("Fish"):
-		body.remove_fish()
+		body.queue_free()
 
 func add_new_fish():
 	var new_fish = fish.instantiate()
@@ -30,3 +31,17 @@ func add_new_fish():
 func add_points(amount:int):
 	print("Adding " + str(amount) + " points")
 	points+= amount
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.is_pressed():
+		shoot()
+
+func shoot():
+	var mouse_position = get_viewport().get_mouse_position()
+	mouse_position = Vector2(clamp(mouse_position.x,375,775),clamp(mouse_position.y,120,520))
+	crosshair.position = mouse_position
+	for i in range(1,10):
+		for body in crosshair.get_overlapping_bodies():
+			if body.is_in_group("Fish"):
+				body.remove_fish()
+				return
