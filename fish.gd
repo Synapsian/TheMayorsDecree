@@ -1,11 +1,27 @@
 extends CharacterBody2D
 
-func _ready() -> void:
-	var chosen_velocity = 10 * randf_range(1,5)
-	if randi_range(1,2) == 2:
-		chosen_velocity = -chosen_velocity
-	velocity = Vector2(chosen_velocity,chosen_velocity)
-	rotation = atan2(velocity.y,velocity.x)
+var SPEED = 50
+var Destination : Vector2
+var Direction
+
+var LastPosition : Vector2
+
+func set_target(TargetPosition:Vector2):
+	SPEED = SPEED * randi_range(1,10)
+	Destination = TargetPosition
+	Direction = position.direction_to(Destination)
+
+func remove_fish():
+	get_parent().add_points(SPEED / 50)
+	queue_free()
 
 func _process(delta: float) -> void:
-	move_and_slide()
+	if not Destination: return
+	position += Direction * SPEED * delta
+
+	if not LastPosition:
+		LastPosition = position
+
+	var AssumedVelocity = Vector2(position.x - LastPosition.x, position.y - LastPosition.y)
+	rotation = atan2(AssumedVelocity.y,AssumedVelocity.x)
+	LastPosition = position

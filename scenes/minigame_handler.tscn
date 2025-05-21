@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://b33u5j54j2g8j" path="res://SPRITES/minigames/panflip.png" id="5_uga2l"]
 [ext_resource type="FontFile" uid="uid://cf50jb0yimike" path="res://FONTS/GeosansLight.ttf" id="6_lre2m"]
 [ext_resource type="Script" uid="uid://c6f7plih15jqn" path="res://SCENES/fishing_minigame.gd" id="7_uj045"]
-[ext_resource type="PackedScene" uid="uid://dba2k1qgruioj" path="res://fish.tscn" id="8_jemb3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpyik"]
 size = Vector2(300, 39.5)
@@ -45,6 +44,9 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 416, 152, 0, 0, 0, 0, 416, 496, 0, 0, 0, 0, 736, 496, 0, 0, 0, 0, 736, 152, 0, 0, 0, 0, 416, 152)
 }
 point_count = 5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jemb3"]
+size = Vector2(20, 414)
 
 [node name="minigame_handler" type="Node2D"]
 script = ExtResource("1_ok36d")
@@ -137,7 +139,6 @@ horizontal_alignment = 1
 uppercase = true
 
 [node name="fishing_minigame" type="CanvasLayer" parent="."]
-visible = false
 script = ExtResource("7_uj045")
 
 [node name="background" type="ColorRect" parent="fishing_minigame"]
@@ -154,15 +155,54 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.344659, 0.810686, 0.999999, 1)
 
-[node name="fish" parent="fishing_minigame" instance=ExtResource("8_jemb3")]
-position = Vector2(439, 187)
-
 [node name="fish_spawnpoints" type="Path2D" parent="fishing_minigame"]
 curve = SubResource("Curve2D_uga2l")
 
 [node name="fish_spawnlocation" type="PathFollow2D" parent="fishing_minigame/fish_spawnpoints"]
 position = Vector2(416, 152)
 rotation = 1.5708
+
+[node name="midpoint" type="ColorRect" parent="fishing_minigame"]
+offset_left = 568.0
+offset_top = 312.0
+offset_right = 584.0
+offset_bottom = 328.0
+
+[node name="bounding_boxes" type="Node2D" parent="fishing_minigame"]
+
+[node name="bounding_box" type="Area2D" parent="fishing_minigame/bounding_boxes"]
+position = Vector2(376, 124)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fishing_minigame/bounding_boxes/bounding_box"]
+position = Vector2(0, 201)
+shape = SubResource("RectangleShape2D_jemb3")
+
+[node name="bounding_box2" type="Area2D" parent="fishing_minigame/bounding_boxes"]
+position = Vector2(776, 124)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fishing_minigame/bounding_boxes/bounding_box2"]
+position = Vector2(0, 201)
+shape = SubResource("RectangleShape2D_jemb3")
+
+[node name="bounding_box3" type="Area2D" parent="fishing_minigame/bounding_boxes"]
+position = Vector2(776, 120)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fishing_minigame/bounding_boxes/bounding_box3"]
+position = Vector2(0, 197)
+shape = SubResource("RectangleShape2D_jemb3")
+
+[node name="bounding_box4" type="Area2D" parent="fishing_minigame/bounding_boxes"]
+position = Vector2(776, 528)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fishing_minigame/bounding_boxes/bounding_box4"]
+position = Vector2(0, 197)
+shape = SubResource("RectangleShape2D_jemb3")
 
 [connection signal="cooking_minigame_ended" from="cooking_minigame" to="." method="_emit_finished_signal"]
 [connection signal="area_entered" from="cooking_minigame/fire/hitbox" to="cooking_minigame" method="_on_hitbox_area_entered"]
