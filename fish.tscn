@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://bxcrc8i7k02xp" path="res://fish.gd" id="1_hgn23"]
 [ext_resource type="Texture2D" uid="uid://3oimnwpb2kqs" path="res://fisch.png" id="1_xu20i"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hgn23"]
-radius = 11.0
-height = 42.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hgn23"]
+size = Vector2(36, 58)
 
 [node name="fish" type="CharacterBody2D"]
+input_pickable = true
 script = ExtResource("1_hgn23")
 
 [node name="sprite" type="Sprite2D" parent="."]
@@ -15,4 +15,4 @@ texture = ExtResource("1_xu20i")
 
 [node name="collision_shape" type="CollisionShape2D" parent="."]
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_hgn23")
+shape = SubResource("RectangleShape2D_hgn23")

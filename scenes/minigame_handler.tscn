@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b087m2d2tfhaj"]
+[gd_scene load_steps=18 format=3 uid="uid://b087m2d2tfhaj"]
 
 [ext_resource type="Script" uid="uid://dpgq3u5gbeyyh" path="res://SCRIPTS/minigame_handler.gd" id="1_ok36d"]
 [ext_resource type="Script" uid="uid://dy1g2736ej0ck" path="res://SCRIPTS/cooking_minigame.gd" id="2_lre2m"]
@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b33u5j54j2g8j" path="res://SPRITES/minigames/panflip.png" id="5_uga2l"]
 [ext_resource type="FontFile" uid="uid://cf50jb0yimike" path="res://FONTS/GeosansLight.ttf" id="6_lre2m"]
 [ext_resource type="Script" uid="uid://c6f7plih15jqn" path="res://SCENES/fishing_minigame.gd" id="7_uj045"]
-[ext_resource type="Texture2D" uid="uid://b0lfosmrejl05" path="res://seaweed_foreground.png" id="8_jemb3"]
+[ext_resource type="Texture2D" uid="uid://kbnnlwvqgpfb" path="res://seaweed.png" id="8_uga2l"]
 [ext_resource type="Texture2D" uid="uid://b0l6fqgchvm16" path="res://crosshair.png" id="9_uga2l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpyik"]
@@ -52,6 +52,12 @@ size = Vector2(20, 414)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jxykw"]
 size = Vector2(80, 80)
+
+[sub_resource type="Curve2D" id="Curve2D_jxykw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 520, 208, 0, 0, 0, 0, 640, 216, 0, 0, 0, 0, 520, 264, 0, 0, 0, 0, 656, 304, 0, 0, 0, 0, 536, 344, 0, 0, 0, 0, 648, 376, 0, 0, 0, 0, 544, 416)
+}
+point_count = 7
 
 [node name="minigame_handler" type="Node2D"]
 script = ExtResource("1_ok36d")
@@ -144,6 +150,7 @@ horizontal_alignment = 1
 uppercase = true
 
 [node name="fishing_minigame" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("7_uj045")
 
 [node name="background" type="ColorRect" parent="fishing_minigame"]
@@ -158,7 +165,7 @@ offset_right = 200.0
 offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.344659, 0.810686, 0.999999, 1)
+color = Color(1.99743e-06, 0.27536, 0.366037, 1)
 
 [node name="fish_spawnpoints" type="Path2D" parent="fishing_minigame"]
 curve = SubResource("Curve2D_uga2l")
@@ -213,7 +220,7 @@ shape = SubResource("RectangleShape2D_jemb3")
 [node name="foreground" type="Sprite2D" parent="fishing_minigame"]
 z_index = 10
 position = Vector2(576, 323)
-texture = ExtResource("8_jemb3")
+texture = ExtResource("8_uga2l")
 
 [node name="crosshair" type="Area2D" parent="fishing_minigame"]
 position = Vector2(1216, 320)
@@ -224,6 +231,13 @@ shape = SubResource("RectangleShape2D_jxykw")
 
 [node name="sprite" type="Sprite2D" parent="fishing_minigame/crosshair"]
 texture = ExtResource("9_uga2l")
+
+[node name="midpoint_randomizer" type="Path2D" parent="fishing_minigame"]
+curve = SubResource("Curve2D_jxykw")
+
+[node name="midpoint_path_follow" type="PathFollow2D" parent="fishing_minigame/midpoint_randomizer"]
+position = Vector2(520, 208)
+rotation = 0.0665682
 
 [connection signal="cooking_minigame_ended" from="cooking_minigame" to="." method="_emit_finished_signal"]
 [connection signal="area_entered" from="cooking_minigame/fire/hitbox" to="cooking_minigame" method="_on_hitbox_area_entered"]
