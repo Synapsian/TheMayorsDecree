@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbqi4tn7o6278"
-path="res://.godot/imported/cooking_fire.png-882c18d32ce86e87fe882f83503b4ce7.ctex"
+path="res://.godot/imported/cooking_fire.png-775dc34ba4e40545e6efb538b41abc5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SPRITES/minigames/cooking_fire.png"
-dest_files=["res://.godot/imported/cooking_fire.png-882c18d32ce86e87fe882f83503b4ce7.ctex"]
+source_file="res://SPRITES/minigames/cooking/cooking_fire.png"
+dest_files=["res://.godot/imported/cooking_fire.png-775dc34ba4e40545e6efb538b41abc5c.ctex"]
 
 [params]
 

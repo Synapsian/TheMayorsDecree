@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3oimnwpb2kqs"
-path="res://.godot/imported/fisch.png-7338a04ca5ba8bfd10189d615fb1d30c.ctex"
+uid="uid://cu8wsnaqqdrse"
+path="res://.godot/imported/water_tile.png-3ba84b5be309def92e846311ea4db7c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fisch.png"
-dest_files=["res://.godot/imported/fisch.png-7338a04ca5ba8bfd10189d615fb1d30c.ctex"]
+source_file="res://SPRITES/minigames/fishing/water_tile.png"
+dest_files=["res://.godot/imported/water_tile.png-3ba84b5be309def92e846311ea4db7c4.ctex"]
 
 [params]
 

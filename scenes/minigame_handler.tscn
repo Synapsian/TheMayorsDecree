@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" uid="uid://dpgq3u5gbeyyh" path="res://SCRIPTS/minigame_handler.gd" id="1_ok36d"]
 [ext_resource type="Script" uid="uid://dy1g2736ej0ck" path="res://SCRIPTS/cooking_minigame.gd" id="2_lre2m"]
-[ext_resource type="Texture2D" uid="uid://cbqi4tn7o6278" path="res://SPRITES/minigames/cooking_fire.png" id="3_uj045"]
-[ext_resource type="Texture2D" uid="uid://ra1n6thn0det" path="res://SPRITES/minigames/pan.png" id="4_jemb3"]
-[ext_resource type="Texture2D" uid="uid://b33u5j54j2g8j" path="res://SPRITES/minigames/panflip.png" id="5_uga2l"]
+[ext_resource type="Texture2D" uid="uid://cbqi4tn7o6278" path="res://SPRITES/minigames/cooking/cooking_fire.png" id="3_uj045"]
+[ext_resource type="Texture2D" uid="uid://ra1n6thn0det" path="res://SPRITES/minigames/cooking/pan.png" id="4_jemb3"]
+[ext_resource type="Texture2D" uid="uid://b33u5j54j2g8j" path="res://SPRITES/minigames/cooking/panflip.png" id="5_uga2l"]
 [ext_resource type="FontFile" uid="uid://cf50jb0yimike" path="res://FONTS/GeosansLight.ttf" id="6_lre2m"]
 [ext_resource type="Script" uid="uid://c6f7plih15jqn" path="res://SCENES/fishing_minigame.gd" id="7_uj045"]
-[ext_resource type="Texture2D" uid="uid://kbnnlwvqgpfb" path="res://seaweed.png" id="8_uga2l"]
-[ext_resource type="Texture2D" uid="uid://b0l6fqgchvm16" path="res://crosshair.png" id="9_uga2l"]
+[ext_resource type="Texture2D" uid="uid://kbnnlwvqgpfb" path="res://SPRITES/minigames/fishing/seaweed.png" id="8_uga2l"]
+[ext_resource type="Texture2D" uid="uid://b0l6fqgchvm16" path="res://SPRITES/minigames/fishing/crosshair.png" id="9_uga2l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpyik"]
 size = Vector2(300, 39.5)
@@ -242,3 +242,4 @@ rotation = 0.0665682
 [connection signal="cooking_minigame_ended" from="cooking_minigame" to="." method="_emit_finished_signal"]
 [connection signal="area_entered" from="cooking_minigame/fire/hitbox" to="cooking_minigame" method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="cooking_minigame/fire/hitbox" to="cooking_minigame" method="_on_hitbox_body_entered"]
+[connection signal="fishing_minigame_ended" from="fishing_minigame" to="." method="_on_fishing_minigame_fishing_minigame_ended"]

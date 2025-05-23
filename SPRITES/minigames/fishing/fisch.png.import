@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcn05d8h7oekr"
-path="res://.godot/imported/chickenleg.png-75702949d23de670abcda2b9af592303.ctex"
+uid="uid://3oimnwpb2kqs"
+path="res://.godot/imported/fisch.png-dd7ffe31b584d9722784162aa48d43f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SPRITES/minigames/chickenleg.png"
-dest_files=["res://.godot/imported/chickenleg.png-75702949d23de670abcda2b9af592303.ctex"]
+source_file="res://SPRITES/minigames/fishing/fisch.png"
+dest_files=["res://.godot/imported/fisch.png-dd7ffe31b584d9722784162aa48d43f3.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c6tytykmnwod5"]
 
 [ext_resource type="Script" uid="uid://cvu4tgutpokcv" path="res://SCRIPTS/food.gd" id="1_y63cd"]
-[ext_resource type="Texture2D" uid="uid://bcn05d8h7oekr" path="res://SPRITES/minigames/chickenleg.png" id="2_y63cd"]
+[ext_resource type="Texture2D" uid="uid://bcn05d8h7oekr" path="res://SPRITES/minigames/cooking/chickenleg.png" id="2_y63cd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pohk7"]
 

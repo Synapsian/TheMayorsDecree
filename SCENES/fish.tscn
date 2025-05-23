@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://dba2k1qgruioj"]
 
-[ext_resource type="Script" uid="uid://bxcrc8i7k02xp" path="res://fish.gd" id="1_hgn23"]
-[ext_resource type="Texture2D" uid="uid://3oimnwpb2kqs" path="res://fisch.png" id="1_xu20i"]
+[ext_resource type="Script" uid="uid://bxcrc8i7k02xp" path="res://SCRIPTS/fish.gd" id="1_47c1g"]
+[ext_resource type="Texture2D" uid="uid://3oimnwpb2kqs" path="res://SPRITES/minigames/fishing/fisch.png" id="2_pbgqx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgn23"]
 size = Vector2(36, 58)
 
 [node name="fish" type="CharacterBody2D"]
 input_pickable = true
-script = ExtResource("1_hgn23")
+script = ExtResource("1_47c1g")
 
 [node name="sprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_xu20i")
+texture = ExtResource("2_pbgqx")
 
 [node name="collision_shape" type="CollisionShape2D" parent="."]
 rotation = 1.5708

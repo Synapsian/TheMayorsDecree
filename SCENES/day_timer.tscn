@@ -6,6 +6,7 @@
 
 [node name="day_timer" type="CanvasLayer"]
 script = ExtResource("1_w61lq")
+start_time = 120
 
 [node name="holder" type="Sprite2D" parent="."]
 position = Vector2(576, 41)

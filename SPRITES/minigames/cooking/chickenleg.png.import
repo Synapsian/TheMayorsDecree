@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ra1n6thn0det"
-path="res://.godot/imported/pan.png-dac5fe4c1649800549e9ea6235cd919a.ctex"
+uid="uid://bcn05d8h7oekr"
+path="res://.godot/imported/chickenleg.png-2192d659db8879d3a233a5552d00bf0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SPRITES/minigames/pan.png"
-dest_files=["res://.godot/imported/pan.png-dac5fe4c1649800549e9ea6235cd919a.ctex"]
+source_file="res://SPRITES/minigames/cooking/chickenleg.png"
+dest_files=["res://.godot/imported/chickenleg.png-2192d659db8879d3a233a5552d00bf0c.ctex"]
 
 [params]
 

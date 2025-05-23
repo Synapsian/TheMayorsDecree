@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0lfosmrejl05"
-path="res://.godot/imported/seaweed_foreground.png-a2648f053ac818753ed9074aaf3c1f82.ctex"
+uid="uid://b33u5j54j2g8j"
+path="res://.godot/imported/panflip.png-a8277c645c36f74ece641047fb8305ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://seaweed_foreground.png"
-dest_files=["res://.godot/imported/seaweed_foreground.png-a2648f053ac818753ed9074aaf3c1f82.ctex"]
+source_file="res://SPRITES/minigames/cooking/panflip.png"
+dest_files=["res://.godot/imported/panflip.png-a8277c645c36f74ece641047fb8305ea.ctex"]
 
 [params]
 
